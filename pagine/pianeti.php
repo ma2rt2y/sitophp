@@ -44,14 +44,14 @@
 
 
     <div class="poster2p" data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <div class="poster2p-cell"><a href="mercurio.php" class="small-text cw">Mercurio</a></div>
-        <div class="poster2p-cell__1"><a href="venere.php" class="small-text cw">Venere</a></div>
-        <div class="poster2p-cell__2"><a href="terra.php" class="small-text cw">Terra</a></div>
-        <div class="poster2p-cell__3"><a href="marte.php" class="small-text cw">Marte</a></div>
-        <div class="poster2p-cell__4"><a href="giove.php" class="small-text cw">Giove</a></div>
-        <div class="poster2p-cell__5"><a href="saturno.php" class="small-text cw">Saturno</a></div>
-        <div class="poster2p-cell__6"><a href="urano.php" class="small-text cw">Urano</a></div>
-        <div class="poster2p-cell__7"><a href="nettuno.php" class="small-text cw">Nettuno</a></div>
+        <div class="poster2p-cell"><a href="mercurio.php" class="medium-text cw">Mercurio</a></div>
+        <div class="poster2p-cell__1"><a href="venere.php" class="medium-text cw">Venere</a></div>
+        <div class="poster2p-cell__2"><a href="terra.php" class="medium-text cw">Terra</a></div>
+        <div class="poster2p-cell__3"><a href="marte.php" class="medium-text cw">Marte</a></div>
+        <div class="poster2p-cell__4"><a href="giove.php" class="medium-text cw">Giove</a></div>
+        <div class="poster2p-cell__5"><a href="saturno.php" class="medium-text cw">Saturno</a></div>
+        <div class="poster2p-cell__6"><a href="urano.php" class="medium-text cw">Urano</a></div>
+        <div class="poster2p-cell__7"><a href="nettuno.php" class="medium-text cw">Nettuno</a></div>
     </div>
 
     <footer class="footer">
