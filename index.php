@@ -15,7 +15,10 @@
 </head>
 
 <body>
-    <div class="header">
+    <?php
+        require("pagine/nav.php");
+    ?>
+    <!-- <div class="header">
         <div class="logo">
             <img src="media/immagini/logo.png" alt="">
         </div>
@@ -31,7 +34,7 @@
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
 
     <div class="hero">
         <div class="hero__content reveal">
