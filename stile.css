@@ -38,6 +38,29 @@ p{
     border-radius: 5px;
 }
 
+.nav{
+    background-color: none;
+}
+
+.navsinistra{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+ul.navlinks{
+    color:rgb(62, 66, 68);
+}
+
+ul.navlinks li{
+    display: inline;
+}
+
+ul.navlinks li a{
+    text-decoration: none;
+}
+
 .header{
     width: 100%;
     position: fixed;
