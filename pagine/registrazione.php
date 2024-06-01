@@ -19,6 +19,10 @@
     <title>Registrazione</title>
 </head>
 <body>
+    <?php
+        require("nav.php");
+    ?>
+
     <form action="" method="post">
         <table>
             <tr>

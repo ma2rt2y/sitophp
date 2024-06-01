@@ -24,6 +24,13 @@
                     echo "<li><a href='pagine/contatti.php'>Contatti</a></li>";
                     echo "<li><a href='pagine/login.php'>Login</a></li>";
                     echo "<li><a href='pagine/registrazione.php'>Registrazione</a></li>";
+                } elseif(basename($_SERVER["PHP_SELF"]) == "giove.php" or basename($_SERVER["PHP_SELF"]) == "marte.php" or basename($_SERVER["PHP_SELF"]) == "mercurio.php" or basename($_SERVER["PHP_SELF"]) == "nettuno.php" or basename($_SERVER["PHP_SELF"]) == "saturno.php" or basename($_SERVER["PHP_SELF"]) == "sole.php" or basename($_SERVER["PHP_SELF"]) == "terra.php" or basename($_SERVER["PHP_SELF"]) == "urano.php" or basename($_SERVER["PHP_SELF"]) == "venere.php"){
+                    echo "<li><a href='../index.php'>Home</a></li>";
+                    echo "<li><a href='pianeti.php'>Pianeti</a></li>";
+                    echo "<li><a href='chi siamo.php'>Chi siamo</a></li>";
+                    echo "<li><a href='contatti.php'>Contatti</a></li>";
+                    echo "<li><a href='login.php'>Login</a></li>";
+                    echo "<li><a href='registrazione.php'>Registrazione</a></li>";
                 } else{
                     echo "<li><a href='../index.php'>Home</a></li>";
                     if(basename($_SERVER["PHP_SELF"]) == "pianeti.php"){

@@ -44,7 +44,6 @@ p{
     position: fixed;
     z-index: 10;
     top: 0;
-    padding: 15px 0;
     background-color: #ffffff00;
     flex-wrap: nowrap;
 }

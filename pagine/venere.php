@@ -15,24 +15,9 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="../media/immagini/logo.png" alt="">
-        </div>
-        <ul class="menu">
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="pianeti.php">Pianeti</a></li>
-            <li><a href="chi siamo.php">Chi siamo</a></li>
-            <li><a href="contatti.php">Contatti</a></li>
-        </ul>
-
-        <div class="mcell">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
+    <?php
+        require("nav.php");
+    ?>
 
     <div class="heropianeti">
         <div class="heropianeti__img">
