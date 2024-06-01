@@ -5,7 +5,7 @@
                 if(basename($_SERVER["PHP_SELF"]) == "index.php"){
                     echo "<li><a id='active'>Home</a></li>";
                     echo "<li><a href='pagine/pianeti.php'>Pianeti</a></li>";
-                    echo "<li><a href='pagine/chisiamo.php'>Chi siamo</a></li>";
+                    echo "<li><a href='pagine/chi siamo.php'>Chi siamo</a></li>";
                     echo "<li><a href='pagine/contatti.php'>Contatti</a></li>";
                     echo "<li><a href='pagine/login.php'>Login</a></li>";
                     echo "<li><a href='pagine/registrazione.php'>Registrazione</a></li>";
@@ -18,7 +18,7 @@
                     if(basename($_SERVER["PHP_SELF"]) == "chisiamo.php"){
                         echo "<li><a id='active'>Chi siamo</a></li>";
                     } else{
-                        echo "<li><a href='chisiamo.php'>Chi siamo</a></li>";
+                        echo "<li><a href='chi siamo.php'>Chi siamo</a></li>";
                     }
                     if(basename($_SERVER["PHP_SELF"]) == "contatti.php"){
                         echo "<li><a id='active'>Contatti</a></li>";
