@@ -1,5 +1,20 @@
 <div class="nav">
     <div class="navsinistra">
+        <?php
+            if(basename($_SERVER["PHP_SELF"]) == "index.php"){
+                echo <<<EOD
+                    <div class='logo'>
+                        <img src='media/immagini/logo.png' alt=''>
+                    </div>
+                EOD;
+            } else{
+                echo <<<EOD
+                    <div class='logo'>
+                        <img src='../media/immagini/logo.png' alt=''>
+                    </div>
+                EOD;
+            }
+        ?>
         <ul class="navlinks">
             <?php
                 if(basename($_SERVER["PHP_SELF"]) == "index.php"){
@@ -10,6 +25,7 @@
                     echo "<li><a href='pagine/login.php'>Login</a></li>";
                     echo "<li><a href='pagine/registrazione.php'>Registrazione</a></li>";
                 } else{
+                    echo "<li><a href='../index.php'>Home</a></li>";
                     if(basename($_SERVER["PHP_SELF"]) == "pianeti.php"){
                         echo "<li><a id='active'>Pianeti</a></li>";
                     } else{
