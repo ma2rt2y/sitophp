@@ -14,9 +14,41 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Data exporting was unselected.
 
--- Data exporting was unselected.
+-- Dumping database structure for database_php
+CREATE DATABASE IF NOT EXISTS `database_php` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `database_php`;
+
+-- Dumping structure for table database_php.navicella
+CREATE TABLE IF NOT EXISTS `navicella` (
+  `nome` char(50) DEFAULT NULL,
+  `codice` int(11) NOT NULL AUTO_INCREMENT,
+  `username_utente` char(50) DEFAULT NULL,
+  PRIMARY KEY (`codice`),
+  KEY `username_utente` (`username_utente`),
+  CONSTRAINT `FK1_navicella_utente` FOREIGN KEY (`username_utente`) REFERENCES `utente` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table database_php.navicella: ~1 rows (approximately)
+REPLACE INTO `navicella` (`nome`, `codice`, `username_utente`) VALUES
+	('Supernova', 1, 'gaiafedeli');
+
+-- Dumping structure for table database_php.utente
+CREATE TABLE IF NOT EXISTS `utente` (
+  `nome` char(50) DEFAULT NULL,
+  `cognome` char(50) DEFAULT NULL,
+  `username` char(50) NOT NULL,
+  `email` char(50) DEFAULT NULL,
+  `telefono` int(11) DEFAULT NULL,
+  `comune` char(50) DEFAULT NULL,
+  `indirizzo` char(50) DEFAULT NULL,
+  `password` char(50) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table database_php.utente: ~1 rows (approximately)
+REPLACE INTO `utente` (`nome`, `cognome`, `username`, `email`, `telefono`, `comune`, `indirizzo`, `password`) VALUES
+	('Gaia', 'Fedeli', 'gaiafedeli', 'gaiafedeli2@gmail.com', NULL, 'Caponago', NULL, '');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
