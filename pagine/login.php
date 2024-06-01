@@ -17,6 +17,7 @@
         require("nav.php");
     ?>    
 
+    <div class="login">
     <form action="" method="post">
         <table>
             <tr>
@@ -48,6 +49,7 @@
             }
         }    
     ?>
+    </div>
     <?php
         require("footer.php");
     ?>
