@@ -76,7 +76,7 @@
                                 WHERE username = '$username'
                                     AND password = '$password'";
 
-                    $ris = $conn -> query($myquery) or die("<p>Query fallita!"$conn->error"</p>");
+                    $ris = $conn -> query($myquery) or die("<p>Query fallita!".$conn->error."</p>");
                     if($ris->num_rows > 0){
                         echo "<p>Utente già esistente</p>";
                     } else{
