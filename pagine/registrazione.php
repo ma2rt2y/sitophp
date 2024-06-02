@@ -28,50 +28,50 @@
             <form action="" method="post">
                 <table class="tabella">
                     <tr>
-                        <td><label for="username" class="medium-text cw">Username: </label></td>
-                        <td><input type="text" nome="username" id="username" value="<?php echo $username?>" required></td>
+                        <td><label for="username" class="normal-text cw">Username: </label></td>
+                        <td><input type="text" nome="username" id="username" value="<?php echo $username?>" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="password" class="medium-text cw">Password: </label></td>
-                        <td><input type="password" nome="password" id="password" required></td>
+                        <td><label for="password" class="normal-text cw">Password: </label></td>
+                        <td><input type="password" nome="password" id="password" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="conferma" class="medium-text cw">Conferma: </label></td>
-                        <td><input type="password" nome="password" id="password" required></td>
+                        <td><label for="conferma" class="normal-text cw">Conferma: </label></td>
+                        <td><input type="password" nome="password" id="password" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="nome" class="medium-text cw">Nome: </label></td>
-                        <td><input type="text" nome="nome" id="nome" value="<?php echo $nome?>"></td>
+                        <td><label for="nome" class="normal-text cw">Nome: </label></td>
+                        <td><input type="text" nome="nome" id="nome" value="<?php echo $nome?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="cognome" class="medium-text cw">Cognome: </label></td>
-                        <td><input type="text" nome="cognome" id="cognome" value="<?php echo $cognome?>"></td>
+                        <td><label for="cognome" class="normal-text cw">Cognome: </label></td>
+                        <td><input type="text" nome="cognome" id="cognome" value="<?php echo $cognome?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="email" class="medium-text cw">Email: </label></td>
-                        <td><input type="text" nome="email" id="email" value="<?php echo $email?>"></td>
+                        <td><label for="email" class="normal-text cw">Email: </label></td>
+                        <td><input type="text" nome="email" id="email" value="<?php echo $email?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="telefono" class="medium-text cw">Telefono: </label></td>
-                        <td><input type="text" nome="telefono" id="telefono" value="<?php echo $telefono?>"></td>
+                        <td><label for="telefono" class="normal-text cw">Telefono: </label></td>
+                        <td><input type="text" nome="telefono" id="telefono" value="<?php echo $telefono?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="comune" class="medium-text cw">Comune: </label></td>
-                        <td><input type="text" nome="comune" id="comune" value="<?php echo $comune?>"></td>
+                        <td><label for="comune" class="normal-text cw">Comune: </label></td>
+                        <td><input type="text" nome="comune" id="comune" value="<?php echo $comune?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
-                        <td><label for="indirizzo" class="medium-text cw">Indirizzo: </label></td>
-                        <td><input type="text" nome="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>"></td>
+                        <td><label for="indirizzo" class="normal-text cw">Indirizzo: </label></td>
+                        <td><input type="text" nome="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                 </table>
                 <div class="button-container">
-                    <input type="submit" class="button cw" value="Accedi">
+                    <input type="submit" class="button1 cw small-text" value="Invia">
                 </div>
             </form>
         </div>
     </div>
 
-    <p>
+    
         <?php
             if(isset($_POST["username"]) and isset($_POST["password"])){
                 if($_POST["username"] == "" or $_POST["password"] == ""){
@@ -108,6 +108,6 @@
                 }
             }
         ?>
-    </p>
+    
 </body>
 </html>

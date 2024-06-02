@@ -24,6 +24,7 @@ p{
 .transition{transform: translateX(20%);}
 
 .big-text{font-size: 70px; font-weight: 400;}
+.big2-text{font-size: 40px;}
 .medium-text{font-size: 25px;}
 .normal-text{font-size: 18px;}
 .small-text{font-size: 14px;}
@@ -44,7 +45,6 @@ p{
     position: fixed;
     z-index: 10;
     top: 0;
-    background-color: #ffffff00;
     flex-wrap: nowrap;
 }
 
@@ -132,11 +132,12 @@ ul.navlinks li a{
     position: relative;
     height: 100vh;
     display: flex;
-    width: 100%;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    width: 100%;
     background-size: cover;
     overflow: hidden;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('media/immagini/pianeti.avif') no-repeat center center;
+
 }
 .hero:after{
     content: ' ';
@@ -150,14 +151,17 @@ ul.navlinks li a{
 }
 .hero__content{
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
+    height: auto;
+    margin: 0;
+    padding: 0;
     z-index: 1;
     position: relative;
+    text-align: center;
+    
 }
 .hero__content h1{
     color: #fff;
+    font-size: 60px;
 }
 .hero--small{
     height: 450px;
@@ -377,13 +381,6 @@ ul.navlinks li a{
     .social{flex-wrap: wrap; height: auto;}
 }
 
-#videopianeti{
-    margin-left: -310px;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-    object-fit: cover;
-}
 
 .poster2p{
     padding: 50px 0;
@@ -697,22 +694,35 @@ ul.navlinks li a{
 .contenuto-background{
     width: 100vw;
     height: 100vh;
-    background: url('media/immagini/stelle2.png') no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('media/immagini/stelle5.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .contenuto{
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin: auto;
 }
 
 .button-container {
     text-align: center; /* Centra il pulsante orizzontalmente */
     margin-top: 20px; /* Spazio sopra il pulsante */
+    
 }
+
+.button1{
+    background: #04123d93;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.c-text{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 *,
 *:before,
