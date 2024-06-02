@@ -39,7 +39,13 @@ p{
 }
 
 .nav{
-    background-color: transparent;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: #ffffff00;
+    flex-wrap: nowrap;
 }
 
 .navsinistra{
@@ -47,17 +53,26 @@ p{
     margin: auto;
     padding: 10px;
     text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 ul.navlinks{
-    color:rgb(62, 66, 68);
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+    width: 70%;
+    padding: 0px;
+    z-index: 0;
 }
 
 ul.navlinks li{
-    display: inline;
+    display: inline-block;
 }
 
 ul.navlinks li a{
+    color: rgb(187, 185, 185);
+    padding: 15px;
+    display: block;
     text-decoration: none;
 }
 
