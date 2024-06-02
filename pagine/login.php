@@ -19,7 +19,7 @@
 
     <div class="contenuto">
         <form action="" method="post">
-            <table>
+            <table class="tabella">
                 <tr>
                     <td><label for="username">Username :</label></td>
                     <td><input type="text" name="username" id="username" value= "<?php echo $username ?>" required></td>
