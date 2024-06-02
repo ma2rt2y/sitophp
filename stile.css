@@ -25,8 +25,8 @@ p{
 
 .big-text{font-size: 70px; font-weight: 400;}
 .medium-text{font-size: 25px;}
-.normal-text{font-size: 18px;}
-.small-text{font-size: 14px;}
+.normal-text{font-size: 16px;}
+.small-text{font-size: 13px;}
 
 @media(max-width: 768px){
     .big-text{font-size: 40px; font-weight: 200;}

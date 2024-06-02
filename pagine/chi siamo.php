@@ -25,9 +25,11 @@
         </div>
         <div class="col2 mg2 reveal">
             <h3 class="normal-text cw">Gaia Fedeli</h3>
-            <p class="small-text cw">Gaia ha solamente diciassette anni ed è già un'imprenditrice di successo. Ha creato recentemente questo sito html per un compito scolastico, nel quale ha preso 10 poiché è naturalmente piaciuto molto al prof Tormene. Ha i capelli castani e mossi, alta 172cm, frequentatrice del Liceo Antonio Banfi di Vimercate dove ha conosciuto il professore Francesco Tormene (il migliore che potesse mai avere).</p>
+            <p class="small-text cw">Gaia ha solamente diciassette anni ed è già un'imprenditrice di successo. Ha creato recentemente questo sito per un compito scolastico, nel quale ha preso 10 poiché è naturalmente piaciuto molto al prof. Ha i capelli castani e mossi, alta 172cm, frequentatrice del Liceo A. Banfi di Vimercate dove ha conosciuto il professore Francesco Tormene (il migliore che potesse mai avere).</p>
             <h3 class="normal-text cw">Martina Villa</h3>
-            <p class="small-text cw">Martina ha appena compiuto i diciotto anni ed ha già conseguito due lauree in medicina. Ha creato recentemente questo sito html per un compito scolastico, nel quale ha preso 10 poiché è naturalmente piaciuto molto al prof Tormene. Ha i capelli di color castano scuro e ricci, alta 160cm, frequentatrice del Liceo Antonio Banfi di Vimercate dove ha conosciuto il professore Francesco Tormene (il migliore che potesse mai avere).</p>            
+            <p class="small-text cw">Martina ha appena compiuto i diciotto anni ed ha già conseguito due lauree in medicina. Ha creato recentemente questo sito per un compito scolastico, nel quale ha preso 10 poiché è naturalmente piaciuto molto al prof. Ha i capelli di color castano scuro e ricci, alta 160cm, frequentatrice del Liceo A. Banfi di Vimercate dove ha conosciuto il professore Francesco Tormene (il migliore che potesse mai avere).</p>            
+            <h3 class="normal-text cw">Carolina Prosperi</h3>
+            <p class="small-text cw">Carolina ormai diciottenne ha aperto ben 3 studi veterinari. Ha creato recentemente questo sito per un compito scolastico, nel quale ha preso 10 poiché è naturalmente piaciuto molto al prof. Ha i capelli di color castano e ricci, alta 170cm, frequentatrice del Liceo A. Banfi di Vimercate dove ha conosciuto il professore Francesco Tormene (il migliore che potesse mai avere).</p>
         </div>
     </div>
 
