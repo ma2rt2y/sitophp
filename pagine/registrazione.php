@@ -23,48 +23,52 @@
         require("nav.php");
     ?>
 
-    <div class="contenuto">
-    <form action="" method="post">
-        <table class="tabella">
-            <tr>
-                <td><label for="username">Username: </label></td>
-                <td><input type="text" nome="username" id="username" value="<?php echo $username?>" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password: </label></td>
-                <td><input type="password" nome="password" id="password" required></td>
-            </tr>
-            <tr>
-                <td><label for="conferma">Conferma: </label></td>
-                <td><input type="password" nome="password" id="password" required></td>
-            </tr>
-            <tr>
-                <td><label for="nome">Nome: </label></td>
-                <td><input type="text" nome="nome" id="nome" value="<?php echo $nome?>"></td>
-            </tr>
-            <tr>
-                <td><label for="cognome">Cognome: </label></td>
-                <td><input type="text" nome="cognome" id="cognome" value="<?php echo $cognome?>"></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email: </label></td>
-                <td><input type="text" nome="email" id="email" value="<?php echo $email?>"></td>
-            </tr>
-            <tr>
-                <td><label for="telefono">Telefono: </label></td>
-                <td><input type="text" nome="telefono" id="telefono" value="<?php echo $telefono?>"></td>
-            </tr>
-            <tr>
-                <td><label for="comune">Comune: </label></td>
-                <td><input type="text" nome="comune" id="comune" value="<?php echo $comune?>"></td>
-            </tr>
-            <tr>
-                <td><label for="indirizzo">Indirizzo: </label></td>
-                <td><input type="text" nome="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>"></td>
-            </tr>
-        </table>
-        <input type="submit" value="Invia">
-    </form>
+    <div class="contenuto-background">
+        <div class="contenuto">
+            <form action="" method="post">
+                <table class="tabella">
+                    <tr>
+                        <td><label for="username" class="medium-text cw">Username: </label></td>
+                        <td><input type="text" nome="username" id="username" value="<?php echo $username?>" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password" class="medium-text cw">Password: </label></td>
+                        <td><input type="password" nome="password" id="password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="conferma" class="medium-text cw">Conferma: </label></td>
+                        <td><input type="password" nome="password" id="password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nome" class="medium-text cw">Nome: </label></td>
+                        <td><input type="text" nome="nome" id="nome" value="<?php echo $nome?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cognome" class="medium-text cw">Cognome: </label></td>
+                        <td><input type="text" nome="cognome" id="cognome" value="<?php echo $cognome?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email" class="medium-text cw">Email: </label></td>
+                        <td><input type="text" nome="email" id="email" value="<?php echo $email?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono" class="medium-text cw">Telefono: </label></td>
+                        <td><input type="text" nome="telefono" id="telefono" value="<?php echo $telefono?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="comune" class="medium-text cw">Comune: </label></td>
+                        <td><input type="text" nome="comune" id="comune" value="<?php echo $comune?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="indirizzo" class="medium-text cw">Indirizzo: </label></td>
+                        <td><input type="text" nome="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>"></td>
+                    </tr>
+                </table>
+                <div class="button-container">
+                    <input type="submit" class="button cw" value="Accedi">
+                </div>
+            </form>
+        </div>
     </div>
 
     <p>

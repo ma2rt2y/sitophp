@@ -693,6 +693,27 @@ ul.navlinks li a{
     color: #ffffff;
 }
 
+
+.contenuto-background{
+    width: 100vw;
+    height: 100vh;
+    background: url('media/immagini/stelle.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.contenuto{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-container {
+    text-align: center; /* Centra il pulsante orizzontalmente */
+    margin-top: 20px; /* Spazio sopra il pulsante */
+}
+
 *,
 *:before,
 *:after{
