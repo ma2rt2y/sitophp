@@ -19,7 +19,7 @@
 
     <div class="contenuto">
         <form action="" method="post">
-            <table >
+            <table>
                 <tr>
                     <td><label for="username">Username :</label></td>
                     <td><input type="text" name="username" id="username" value= "<?php echo $username ?>" required></td>
@@ -29,8 +29,9 @@
                     <td><input type="password" name="password" id="password" required></td>
                 </tr>
             </table>
-            <input type="submit" value="accedi">
         </form>
+
+        <input type="submit" class="button" value="accedi">
 
         <?php
             if(isset($_POST['password']) and isset($_POST['username'])){

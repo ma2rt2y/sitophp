@@ -23,6 +23,7 @@
         require("nav.php");
     ?>
 
+    <div class="contenuto">
     <form action="" method="post">
         <table>
             <tr>
@@ -64,6 +65,7 @@
         </table>
         <input type="submit" value="Invia">
     </form>
+    </div>
 
     <p>
         <?php
