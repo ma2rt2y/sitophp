@@ -39,14 +39,7 @@ p{
 }
 
 .nav{
-    display: flex;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    padding: 15px 0;
-    background-color: #ffffff00;
-    flex-wrap: nowrap;
+    background-color: transparent;
 }
 
 .navsinistra{
@@ -54,26 +47,17 @@ p{
     margin: auto;
     padding: 10px;
     text-align: left;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
 }
 
 ul.navlinks{
-    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
-    width: 70%;
-    padding: 0px;
-    z-index: 0;
+    color:rgb(62, 66, 68);
 }
 
 ul.navlinks li{
-    display: inline-block;
+    display: inline;
 }
 
 ul.navlinks li a{
-    color: rgb(187, 185, 185);
-    padding: 15px;
-    display: block;
     text-decoration: none;
 }
 
@@ -693,13 +677,6 @@ ul.navlinks li a{
 .wa-link{
     color: #ffffff;
 }
-
-.login{
-    width: 100%;
-    text-align: center;
-}
-
-
 
 
 
