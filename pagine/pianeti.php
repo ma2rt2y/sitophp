@@ -18,14 +18,11 @@
         require("nav.php");
     ?>
 
-    <div class="hero">
-        <div class="hero__content reveal transition">
-            <h1 class="big-text">I pianeti</h1>
+    <div class="hero" >
+        <div class="hero__content" style = "width: 100%">
+           <h1>Prenota un viaggio <br> sul tuo pianeta preferito</h1>
+           <a href="nettuno.php" class="button cw big2-text">Prenota</a>
         </div>
-
-        <video autoplay muted loop id="videopianeti">
-            <source src="../media/video/pianeti2.mp4" type="video/mp4">
-        </video>
     </div>
 
 
