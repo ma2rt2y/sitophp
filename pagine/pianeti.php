@@ -20,8 +20,8 @@
 
     <div class="hero" >
         <div class="hero__content" style = "width: 100%">
-           <h1>Prenota un viaggio <br> sul tuo pianeta preferito</h1>
-           <a href="nettuno.php" class="button cw big2-text">Prenota</a>
+           <h1 class="big-text">Prenota un viaggio <br> sul tuo pianeta preferito</h1>
+           <a href="nettuno.php" class="button cw big2-text">Clicca qui!</a>
         </div>
     </div>
 

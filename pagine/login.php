@@ -20,7 +20,7 @@
     <div class="contenuto-background">
         <div class="contenuto">
             <form action="" method="post">
-                <table class="tabella">
+                <table>
                     <tr>
                         <td><label for="username" class="normal-text cw">Username: </label></td>
                         <td><input type="text" name="username" id="username" value= "<?php echo $username ?>" required style=" background-color: #ffffff77;"></td>
