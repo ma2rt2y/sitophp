@@ -26,8 +26,8 @@ p{
 .big-text{font-size: 70px; font-weight: 400;}
 .big2-text{font-size: 40px;}
 .medium-text{font-size: 25px;}
-.normal-text{font-size: 16px;}
-.small-text{font-size: 13px;}
+.normal-text{font-size: 18px;}
+.small-text{font-size: 14px;}
 
 @media(max-width: 768px){
     .big-text{font-size: 40px; font-weight: 200;}
@@ -157,7 +157,6 @@ ul.navlinks li a{
     z-index: 1;
     position: relative;
     text-align: center;
-    
 }
 .hero__content h1{
     color: #fff;
@@ -381,6 +380,13 @@ ul.navlinks li a{
     .social{flex-wrap: wrap; height: auto;}
 }
 
+#videopianeti{
+    margin-left: -310px;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
 
 .poster2p{
     padding: 50px 0;
@@ -723,6 +729,11 @@ ul.navlinks li a{
     text-align: center;
 }
 
+input[type="text"],input[type="password"]{
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
 
 *,
 *:before,
