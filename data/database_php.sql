@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for database_php1
-CREATE DATABASE IF NOT EXISTS `database_php1` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `database_php1`;
+-- Dumping database structure for database_php
+CREATE DATABASE IF NOT EXISTS `database_php` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `database_php`;
 
--- Dumping structure for table database_php1.navicella
+-- Dumping structure for table database_php.navicella
 CREATE TABLE IF NOT EXISTS `navicella` (
   `nome_navicella` char(50) DEFAULT NULL,
   `cod_navicella` char(50) NOT NULL,
@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS `navicella` (
   CONSTRAINT `FK1_username_utente` FOREIGN KEY (`username_utente`) REFERENCES `utenti` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php1.navicella: ~0 rows (approximately)
+-- Dumping data for table database_php.navicella: ~0 rows (approximately)
 
--- Dumping structure for table database_php1.pianeta
+-- Dumping structure for table database_php.pianeta
 CREATE TABLE IF NOT EXISTS `pianeta` (
   `nome_pianeta` char(50) DEFAULT NULL,
   `cod_pianeta` char(50) NOT NULL,
@@ -39,9 +39,9 @@ CREATE TABLE IF NOT EXISTS `pianeta` (
   PRIMARY KEY (`cod_pianeta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php1.pianeta: ~0 rows (approximately)
+-- Dumping data for table database_php.pianeta: ~0 rows (approximately)
 
--- Dumping structure for table database_php1.utenti
+-- Dumping structure for table database_php.utenti
 CREATE TABLE IF NOT EXISTS `utenti` (
   `username` char(50) NOT NULL,
   `nome_utente` char(50) DEFAULT NULL,
@@ -54,13 +54,13 @@ CREATE TABLE IF NOT EXISTS `utenti` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php1.utenti: ~2 rows (approximately)
+-- Dumping data for table database_php.utenti: ~2 rows (approximately)
 REPLACE INTO `utenti` (`username`, `nome_utente`, `cognome`, `password`, `email`, `telefono`, `comune`, `indirizzo`) VALUES
 	('gaiafedeli', 'Gaia', 'Fedeli', '123', 'gaia.fedeli@liceobanfi.eu', 2147483647, 'Caponago', 'Via Tua Madre, 18'),
 	('marti', 'Martina', 'Villa', 'aaaaaaaaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72'),
 	('martina', 'Martina', 'Villa', 'aaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72');
 
--- Dumping structure for table database_php1.viaggia
+-- Dumping structure for table database_php.viaggia
 CREATE TABLE IF NOT EXISTS `viaggia` (
   `cod_navicella` char(50) NOT NULL,
   `cod_pianeta` char(50) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `viaggia` (
   CONSTRAINT `FK2_cod_pianeta` FOREIGN KEY (`cod_pianeta`) REFERENCES `pianeta` (`cod_pianeta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php1.viaggia: ~0 rows (approximately)
+-- Dumping data for table database_php.viaggia: ~0 rows (approximately)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
