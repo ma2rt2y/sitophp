@@ -54,8 +54,8 @@
                     $nome_navicella = $_POST["nome_navicella"];
                 }
 
-                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella,
-                        FROM navicella JOIN utenti ON navicella.username_utenti = utenti_username
+                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.username_utenti, pianeta.nome_pianeta,
+                        FROM navicella JOIN pianeti ON navicella.username_utenti = utenti_username
                         WHERE nome_navicella LIKE '%$nome_navicella%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
