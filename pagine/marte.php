@@ -33,7 +33,7 @@
     <div class="pianetiv">
         <div class="pianetiv__content">
             <p class="small-text1 cw">Le sue dimensioni, intermedie tra quelle terrestri e quelle della Luna, e la sua inclinazione dell'asse di rotazione e durata del giorno simili a quelle terrestri, lo rendono oggetto di grande interesse scientifico.
-                La superficie di Marte è un paesaggio affascinante e variegato, caratterizzato da vulcani, valli, calotte polari e deserti sabbiosi. Sebbene ci siano indizi di un passato con la presenza di acqua, la superficie marziana è fortemente craterizzata, principalmente a causa dell'assenza di attività tettonica delle placche. Inoltre, l'atmosfera estremamente sottile del pianeta non è in grado di erodere efficacemente le formazioni geologiche, contribuendo alla loro conservazione nel tempo.</p>
+                La superficie di Marte è un paesaggio affascinante, caratterizzato da vulcani, valli, calotte polari e deserti sabbiosi. Sebbene ci siano indizi di un passato con la presenza di acqua, la superficie marziana è fortemente craterizzata, principalmente a causa dell'assenza di attività tettonica delle placche. Inoltre, l'atmosfera estremamente sottile del pianeta non è in grado di erodere efficacemente le formazioni geologiche, contribuendo alla loro conservazione nel tempo.</p>
         </div>
         <div class="pianetiv__img">
             <video autoplay muted loop id="videoz">
