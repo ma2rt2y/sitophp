@@ -56,7 +56,16 @@
 
                 $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella,
                         FROM navicella JOIN utenti ON navicella.username_utenti = utenti_username
-                        WHERE nome_navicella LIKE '$nome_navicella'";
+                        WHERE nome_navicella LIKE '%$nome_navicella%'";
+                
+                $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+                if ($ris->num_rows > 0) {
+                    echo "<p>Scegli tra le soluzioni trovate.</p>";
+                    
+                    foreach($ris as $riga){
+                        
+                    }
+                }
             ?>
     </form>
     <?php
