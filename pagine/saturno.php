@@ -32,7 +32,7 @@
     <div class="pianetiv">
         <div class="pianetiv__content">
             <p class="small-text1 cw">Il pianeta ha un esteso e vistoso sistema di anelli esterni, che consistono principalmente in particelle di ghiaccio e polveri di silicati. Insieme agli anelli, orbitano 146 lune conosciute, e per questo Saturno detiene il primato per il maggior numero di satelliti nel sistema solare. Tra queste lune, Titano è la più grande (più grande di Mercurio e Plutone) ed anche l'unica del sistema solare ad avere un'atmosfera di grandissimo interesse. I venti, nell'atmosfera di Saturno, possono raggiungere i 1800 km/h, risultando significativamente più veloci di quelli su Giove e leggermente meno veloci di quelli che spirano nell'atmosfera di Nettuno.
-                Il nome di Saturno deriva dall'omonimo dio della mitologia romana, omologo del titano greco Crono. Il suo simbolo astronomico (♄) è, una rappresentazione stilizzata della falce del dio dell'agricoltura. </p>
+                Il nome deriva dall'omonimo dio della mitologia romana, omologo del titano greco Crono. Il suo simbolo astronomico (♄) è, una rappresentazione stilizzata della falce del dio dell'agricoltura. </p>
         </div>
         <div class="pianetiv__img">
             <video autoplay muted loop id="videoz">
