@@ -50,23 +50,58 @@
 
     <form action="" method = "post">
             <?php
-                if(isset($_POST["nome_navicella"])){
+                if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"])){
                     $nome_navicella = $_POST["nome_navicella"];
-                }
+                    $nome_pianeta = $_POST["nome_pianeta"];
 
-                $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta
-                        FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
-                                        JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
-                        WHERE nome_navicella LIKE '%$nome_navicella%'
-                            AND nome_pianeta LIKE '%$nome_pianeta%";
-                
-                $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-                if ($ris->num_rows > 0) {
-                    echo "<p>Scegli tra le soluzioni trovate.</p>";
+                    $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.img, pianeta.nome_pianeta
+                            FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
+                                            JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
+                            WHERE nome_navicella LIKE '%$nome_navicella%'
+                                AND nome_pianeta LIKE '%$nome_pianeta%";
                     
-                    foreach($ris as $riga){
+                    $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+                    if ($ris->num_rows > 0) {
+                        echo "<p>Scegli tra le soluzioni trovate la navicella che preferisci.</p>";
                         
+                        foreach($ris as $riga){
+                            $cod_navicella = $riga["cod_navicella"];
+                            $nome_navicella = $riga["nome_navicella"];
+                            $img_navicella = $riga["img"];
+                            $nome_pianeta = $riga["nome_pianeta"];
+
+                            echo <<<EOD
+                                <div class="elenco_navicelle">
+                                <div class="card-navicella">
+                                    <div class="card-navicella__img">
+                                        <img src="../immagini/$img_navicella" alt="$img_navicella">
+                                    </div>
+                                    <div class="card-navicella__testo">
+                                        <div class="card-navicella__testo__centrato">
+                                            <p>Nome navicella: $nome_navicella</p>
+                                            <p>Pianeti disponibili: $nome_pianeta</p>
+                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda della navicella</a></p>
+                            EOD;
+                            if($riga["username_utente"]){
+                                echo "           <p>Disponibile: No</p>";
+                            }
+                            else{
+                                echo "           <p>Disponibile: Sì</p>";
+                                echo "           <p><input type="checkbox" name="cod_navicelle[]" value='$cod_navicella'/> Spunta se vuoi prenotare questa navicella</p>";
+                            }
+                            echo <<<EOD
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            EOD;
+                        }
+                        echo "<p class='button'><input type='submit' value='Conferma'></p>";
                     }
+                    else {
+                        echo "<p>Non ho trovato alcuna navicella che risponda alle tue richieste</p>";
+                    }
+                    echo "</table>";
                 }
             ?>
     </form>
