@@ -43,9 +43,9 @@ CREATE TABLE IF NOT EXISTS `pianeta` (
 
 -- Dumping structure for table database_php1.utenti
 CREATE TABLE IF NOT EXISTS `utenti` (
+  `username` char(50) NOT NULL,
   `nome_utente` char(50) DEFAULT NULL,
   `cognome` char(50) DEFAULT NULL,
-  `username` char(50) NOT NULL,
   `password` char(50) NOT NULL,
   `email` char(50) DEFAULT NULL,
   `telefono` int(11) DEFAULT NULL,
@@ -54,7 +54,10 @@ CREATE TABLE IF NOT EXISTS `utenti` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php1.utenti: ~0 rows (approximately)
+-- Dumping data for table database_php1.utenti: ~2 rows (approximately)
+REPLACE INTO `utenti` (`username`, `nome_utente`, `cognome`, `password`, `email`, `telefono`, `comune`, `indirizzo`) VALUES
+	('marti', 'Martina', 'Villa', 'aaaaaaaaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72'),
+	('martina', 'Martina', 'Villa', 'aaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72');
 
 -- Dumping structure for table database_php1.viaggia
 CREATE TABLE IF NOT EXISTS `viaggia` (
