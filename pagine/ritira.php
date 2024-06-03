@@ -47,5 +47,10 @@
             </table>
         </form>
     </div>
+
+    <?php
+        require('footer1.php');
+    ?>
+    
 </body>
 </html>
