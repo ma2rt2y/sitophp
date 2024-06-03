@@ -54,9 +54,11 @@
                     $nome_navicella = $_POST["nome_navicella"];
                 }
 
-                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.username_utenti, pianeta.nome_pianeta,
-                        FROM navicella JOIN pianeti ON navicella.username_utenti = utenti_username
-                        WHERE nome_navicella LIKE '%$nome_navicella%'";
+                $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta
+                        FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
+                                        JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
+                        WHERE nome_navicella LIKE '%$nome_navicella%'
+                            AND nome_pianeta LIKE '%$nome_pianeta%";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
