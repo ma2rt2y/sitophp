@@ -39,7 +39,7 @@
                 if(isset($_POST['password']) and isset($_POST['username'])){
                     require("../data/connessione_db.php");
                     $sql="SELECT username, password 
-                        FROM utente
+                        FROM utenti
                         WHERE username='$username' and password='$password'";
                     $ris=$conn->query($sql) or die("<p>Query fallita</p>");
                     if($ris->num_rows==0){
