@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `utenti` (
   `cognome` char(50) DEFAULT NULL,
   `password` char(50) NOT NULL,
   `email` char(50) DEFAULT NULL,
-  `telefono` int(11) DEFAULT NULL,
+  `telefono` int(14) DEFAULT NULL,
   `comune` char(50) DEFAULT NULL,
   `indirizzo` char(50) DEFAULT NULL,
   PRIMARY KEY (`username`)
@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `utenti` (
 
 -- Dumping data for table database_php1.utenti: ~2 rows (approximately)
 REPLACE INTO `utenti` (`username`, `nome_utente`, `cognome`, `password`, `email`, `telefono`, `comune`, `indirizzo`) VALUES
+	('gaiafedeli', 'Gaia', 'Fedeli', '123', 'gaia.fedeli@liceobanfi.eu', 2147483647, 'Caponago', 'Via Tua Madre, 18'),
 	('marti', 'Martina', 'Villa', 'aaaaaaaaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72'),
 	('martina', 'Martina', 'Villa', 'aaaa', 'martina.villa@liceobanfi.eu', 2147483647, 'Agrate', 'Via Biagio, 72');
 
