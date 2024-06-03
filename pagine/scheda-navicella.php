@@ -56,8 +56,6 @@
         </div>
     </div>
 
-    <h1><?php echo $titolo ?></h1>
-
     <?php
         require('footer1.php');
     ?>
