@@ -33,7 +33,7 @@
     ?>
     <div class="contenuto">
         <h1 style="text-align: center; margin-top: 0px;">Prenota la tua navicella</h1>
-        <p>Cerca un pianea che vuoi visitare o il nome di una navicella</p>
+        <p>Cerca un pianeta che vuoi visitare o il nome di una navicella</p>
         <form action="" method="post">
             <table id="tab">
                 <tr>

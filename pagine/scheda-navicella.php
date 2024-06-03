@@ -16,10 +16,10 @@
             for($ris as $riga){
                 $cod_navicella=$riga['cod_navicella'];
                 $nome_navicella=$riga['nome_navicella'];
-                $descrizione_txt=$riga['descrizione_txt']
+                $descrizione_txt=$riga['descrizione_txt'];
                 $cod_pianeta=$riga['cod_pianeta'];
-                $nome_pianeta=$riga['nome_pianeta']
-                $diametro=$riga['diamentro']
+                $nome_pianeta=$riga['nome_pianeta'];
+                $diametro=$riga['diamentro'];
             }
         }
     } 
