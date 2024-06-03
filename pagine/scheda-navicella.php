@@ -8,7 +8,7 @@
         $sql="SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.descrizione_txt pianeta.cod_pianeta, pianeta.nome_pianeta, pianeta.diametro
               FROM navicella JOIN pianeta ON navicella.cod_navicella=pianeta.cod_navicella
               WHERE cod_navicella=$cod_navicella "
-        $ris=$conn->query($sql) or die("<p>Query fallita</p>");
+        $ris=$conn->query($sql) or die("<p>errore</p>");
         if($ris->num_rows==0){
             die("navicella non trovata");
         }
