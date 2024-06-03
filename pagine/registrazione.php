@@ -98,7 +98,7 @@
                         $_SESSION["username"] = $username;
 
                         $conn->close();
-                        echo "<p>Utente registrato con successo! Sarai mandato alla pagina tra 5 secondi</p>";
+                        echo "<p>Utente registrato con successo! Verrai mandato alla pagina tra 5 secondi</p>";
                         header("Refresh: 5, URL=home.php");
                     } else{
                         echo "<p>Non è stato possibile registrare l'utente.</p>";
