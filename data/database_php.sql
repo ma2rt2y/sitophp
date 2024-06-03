@@ -26,15 +26,25 @@ CREATE TABLE IF NOT EXISTS `navicella` (
   `username_utente` char(50) DEFAULT NULL,
   PRIMARY KEY (`codice`),
   KEY `username_utente` (`username_utente`),
-  CONSTRAINT `FK1_navicella_utente` FOREIGN KEY (`username_utente`) REFERENCES `utente` (`username`)
+  CONSTRAINT `FK1_navicella_utente` FOREIGN KEY (`username_utente`) REFERENCES `utenti` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php.navicella: ~1 rows (approximately)
+-- Dumping data for table database_php.navicella: ~0 rows (approximately)
 REPLACE INTO `navicella` (`nome`, `codice`, `username_utente`) VALUES
 	('Supernova', 1, 'gaiafedeli');
 
--- Dumping structure for table database_php.utente
-CREATE TABLE IF NOT EXISTS `utente` (
+-- Dumping structure for table database_php.pianeta
+CREATE TABLE IF NOT EXISTS `pianeta` (
+  `nome` char(50) DEFAULT NULL,
+  `codice` int(11) NOT NULL AUTO_INCREMENT,
+  `diametro` int(11) DEFAULT NULL,
+  PRIMARY KEY (`codice`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table database_php.pianeta: ~0 rows (approximately)
+
+-- Dumping structure for table database_php.utenti
+CREATE TABLE IF NOT EXISTS `utenti` (
   `nome` char(50) DEFAULT NULL,
   `cognome` char(50) DEFAULT NULL,
   `username` char(50) NOT NULL,
@@ -46,9 +56,21 @@ CREATE TABLE IF NOT EXISTS `utente` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php.utente: ~1 rows (approximately)
-REPLACE INTO `utente` (`nome`, `cognome`, `username`, `email`, `telefono`, `comune`, `indirizzo`, `password`) VALUES
+-- Dumping data for table database_php.utenti: ~1 rows (approximately)
+REPLACE INTO `utenti` (`nome`, `cognome`, `username`, `email`, `telefono`, `comune`, `indirizzo`, `password`) VALUES
 	('Gaia', 'Fedeli', 'gaiafedeli', 'gaiafedeli2@gmail.com', NULL, 'Caponago', NULL, '');
+
+-- Dumping structure for table database_php.viaggia
+CREATE TABLE IF NOT EXISTS `viaggia` (
+  `codice_navicella` int(11) NOT NULL DEFAULT 0,
+  `codice_pianeta` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`codice_navicella`,`codice_pianeta`),
+  KEY `FK2_codice_pianeta` (`codice_pianeta`),
+  CONSTRAINT `FK1_codice_navicella` FOREIGN KEY (`codice_navicella`) REFERENCES `navicella` (`codice`),
+  CONSTRAINT `FK2_codice_pianeta` FOREIGN KEY (`codice_pianeta`) REFERENCES `pianeta` (`codice`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table database_php.viaggia: ~0 rows (approximately)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
