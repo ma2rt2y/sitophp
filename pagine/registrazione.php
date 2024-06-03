@@ -29,39 +29,39 @@
                 <table class="tabella">
                     <tr>
                         <td><label for="username" class="normal-text cw">Username: </label></td>
-                        <td><input type="text" nome="username" id="username" value="<?php echo $username?>" required style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="username" id="username" value="<?php echo $username?>" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="password" class="normal-text cw">Password: </label></td>
-                        <td><input type="password" nome="password" id="password" required style=" background-color: #ffffff77;"></td>
+                        <td><input type="password" name="password" id="password" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="conferma" class="normal-text cw">Conferma: </label></td>
-                        <td><input type="password" nome="password" id="password" required style=" background-color: #ffffff77;"></td>
+                        <td><input type="password" name="conferma" id="conferma" required style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="nome" class="normal-text cw">Nome: </label></td>
-                        <td><input type="text" nome="nome" id="nome" value="<?php echo $nome?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="nome" id="nome" value="<?php echo $nome?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="cognome" class="normal-text cw">Cognome: </label></td>
-                        <td><input type="text" nome="cognome" id="cognome" value="<?php echo $cognome?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="cognome" id="cognome" value="<?php echo $cognome?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="email" class="normal-text cw">Email: </label></td>
-                        <td><input type="text" nome="email" id="email" value="<?php echo $email?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="email" id="email" value="<?php echo $email?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="telefono" class="normal-text cw">Telefono: </label></td>
-                        <td><input type="text" nome="telefono" id="telefono" value="<?php echo $telefono?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="telefono" id="telefono" value="<?php echo $telefono?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="comune" class="normal-text cw">Comune: </label></td>
-                        <td><input type="text" nome="comune" id="comune" value="<?php echo $comune?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="comune" id="comune" value="<?php echo $comune?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                     <tr>
                         <td><label for="indirizzo" class="normal-text cw">Indirizzo: </label></td>
-                        <td><input type="text" nome="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>" style=" background-color: #ffffff77;"></td>
+                        <td><input type="text" name="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                 </table>
                 <div class="button-container">
@@ -90,7 +90,7 @@
                 if($ris->num_rows > 0){
                     echo "<p>Utente già esistente</p>";
                 } else{
-                    $sql = "INSERT INTO utenti(username, password, nome, cognome, email, telefono, comune, inidirizzo)
+                    $sql = "INSERT INTO utenti(username, password, nome_utente, cognome, email, telefono, comune, indirizzo)
                             VALUES ('$username', '$password', '$nome', '$cognome', '$email', '$telefono', '$comune', '$indirizzo')";
                     
                     if($conn->query($sql) == true){
@@ -106,7 +106,7 @@
                     }
                 }
             }
-        }
+        } else{echo "CIAO";}
     ?>
     
 </body>
