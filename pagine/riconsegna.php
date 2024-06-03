@@ -36,25 +36,40 @@
         <h1 style="text-align: center; margin-top: 0px;">Riconsegna la tua navicella</h1>
         <p>Devi riconsegnare una navicella? Sei nel posto giusto</p>
         <?php
-            $sql="SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.descrizione_txt pianeta.cod_pianeta, pianeta.nome_pianeta, pianeta.diametro
-                    FROM navicella JOIN pianeta ON navicella.cod_navicella=pianeta.cod_navicella
-                    WHERE cod_navicella=$cod_navicella "
-      $ris=$conn->query($sql) or die("<p>errore</p>");
-      if( $ris->num_rows == 0){
-        echo "<p>Non ci sono navicelle da riconsegnare</p>";
-      }else{
-        echo "<form action='' method ='post'>";
-        foreach($ris as $riga){
-            $cod_navicella=$riga['cod_navicella'];
-            $nome_navicella=$riga['nome_navicella'];
-            $descrizione_txt=$riga['descrizione_txt'];
-            $cod_pianeta=$riga['cod_pianeta'];
-            $nome_pianeta=$riga['nome_pianeta'];
-            $diametro=$riga['diamentro'];
+            $sql="SELECT navicella.nome_navicella, pianeta.nome_pianeta
+                  FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
+                                 JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
+                  WHERE nome_navicella LIKE '%$nome_navicella%'
+                  AND nome_pianeta LIKE '%$nome_pianeta%'";
 
-   
+        $ris=$conn->query($sql) or die("<p>errore</p>");
+        if( $ris->num_rows == 0){
+            echo "<p>Non ci sono navicelle da riconsegnare</p>";
+        }else{
+            echo "<form action='' method ='post'>";
+            foreach($ris as $riga){
+                $nome_navicella=$riga['nome_navicella'];
+                $nome_pianeta=$riga['nome_pianeta'];
+
+                echo <<<EOD
+                        <div class="elenco_navicelle">
+                            <div class="card">
+                                <div class="card_image">
+                                    <img src="../immagini/$nome_navicella" alt="$nome_navicella">
+                                </div>
+                                <div class="card__copy p">
+                                    <div class="card-libro__testo__centrato">
+                                        <p>Titolo: $nome_navicella</p>
+                                        <p><input type='checkbox' name='nome_navicella[]' value='$nome_navicella'/> Spunta per riconsegnare la navicella</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    EOD;
+            }
+            echo "<p style='text-align: center; padding-top: 10px'><input type='submit' value='Conferma'/></p>";
+            echo "</form>";
         }
-      }
       ?>
     </div>
 

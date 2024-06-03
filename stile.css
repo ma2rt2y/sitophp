@@ -742,3 +742,12 @@ input[type="text"],input[type="password"]{
         -moz-box-sizing: border-box;
              box-sizing: border-box;
 }
+
+.elenco_navicelle{
+    text-align: left;
+	margin: auto;
+}
+
+.card_navicelle{
+    
+}

@@ -58,7 +58,7 @@
                         FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
                                         JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
                         WHERE nome_navicella LIKE '%$nome_navicella%'
-                            AND nome_pianeta LIKE '%$nome_pianeta%";
+                            AND nome_pianeta LIKE '%$nome_pianeta%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
