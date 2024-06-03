@@ -72,42 +72,42 @@
     </div>
 
     
-        <?php
-            if(isset($_POST["username"]) and isset($_POST["password"])){
-                if($_POST["username"] == "" or $_POST["password"] == ""){
-                    echo "<p>Username e password non possono essere vuoti</p>";
-                } elseif($_POST["password"] != $_POST["conferma"]){
-                    echo "<p>Le due password non corrispondono!</p>";
+    <?php
+        if(isset($_POST["username"]) and isset($_POST["password"])){
+            if($_POST["username"] == "" or $_POST["password"] == ""){
+                echo "<p>Username e password non possono essere vuoti</p>";
+            } elseif($_POST["password"] != $_POST["conferma"]){
+                echo "<p>Le due password non corrispondono!</p>";
+            } else{
+                require("../data/connessione_db.php");
+
+                $myquery = "SELECT username, password
+                            FROM utenti
+                            WHERE username = '$username'
+                                AND password = '$password'";
+
+                $ris = $conn -> query($myquery) or die("<p>Query fallita!".$conn->error."</p>");
+                if($ris->num_rows > 0){
+                    echo "<p>Utente già esistente</p>";
                 } else{
-                    require("../data/connessione_db.php");
+                    $sql = "INSERT INTO utenti(username, password, nome, cognome, email, telefono, comune, inidirizzo)
+                            VALUES ('$username', '$password', '$nome', '$cognome', '$email', '$telefono', '$comune', '$indirizzo')";
+                    
+                    if($conn->query($sql) == true){
+                        session_start();
+                        $_SESSION["username"] = $username;
 
-                    $myquery = "SELECT username, password
-                                FROM utenti
-                                WHERE username = '$username'
-                                    AND password = '$password'";
-
-                    $ris = $conn -> query($myquery) or die("<p>Query fallita!".$conn->error."</p>");
-                    if($ris->num_rows > 0){
-                        echo "<p>Utente già esistente</p>";
+                        $conn->close();
+                        echo "<p>Utente registrato con successo! Sarai mandato alla pagina tra 5 secondi</p>";
+                        header("Refresh: 5, URL=home.php");
                     } else{
-                        $sql = "INSERT INTO utenti(username, password, nome, cognome, email, telefono, comune, inidirizzo)
-                                VALUES ('$username', '$password', '$nome', '$cognome', '$email', '$telefono', '$comune', '$indirizzo')";
-                        
-                        if($conn->query($sql) == true){
-                            session_start();
-                            $_SESSION["username"] = $username;
-
-                            $conn->close();
-                            echo "<p>Utente registrato con successo! Sarai mandato alla pagina tra 5 secondi</p>";
-                            header("Refresh: 5, URL=home.php");
-                        } else{
-                            echo "<p>Non è stato possibile registrare l'utente.</p>";
-                            $conn->close();
-                        }
+                        echo "<p>Non è stato possibile registrare l'utente.</p>";
+                        $conn->close();
                     }
                 }
             }
-        ?>
+        }
+    ?>
     
 </body>
 </html>
