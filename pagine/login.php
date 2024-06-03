@@ -49,7 +49,7 @@
                         session_start();
                         $_SESSION['username']=$username;
                         $conn->close();
-                        header("pianeti.php");
+                        header("location: pianeti.php");
                     }
                 }    
             ?>
