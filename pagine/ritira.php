@@ -48,6 +48,17 @@
         </form>
     </div>
 
+    <form action="" method = "post">
+            <?php
+                if(isset($_POST["nome_navicella"])){
+                    $nome_navicella = $_POST["nome_navicella"];
+                }
+
+                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella,
+                        FROM navicella JOIN utenti ON navicella.username_utenti = utenti_username
+                        WHERE nome_navicella LIKE '$nome_navicella'";
+            ?>
+    </form>
     <?php
         require('footer1.php');
     ?>
