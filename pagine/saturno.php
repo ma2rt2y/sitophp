@@ -25,7 +25,7 @@
         </div>
         <div class="heropianeti__content reveal">
             <h1 class="cw">SATURNO</h1>
-            <P class="small-text1 cww">Saturno è il sesto pianeta del sistema solare in ordine di distanza dal Sole e il secondo pianeta più massiccio, dopo Giove. Rispetto alla Terra, ha un raggio medio 9,48 volte maggiore e una massa 95 volte superiore. Saturno è classificato come gigante gassoso, insieme a Giove, Urano e Nettuno, ed è composto per il 95% da idrogeno e per il 3% da elio, a cui seguono gli altri elementi; il nucleo, consistente in silicati e ghiacci, è circondato da uno spesso strato di idrogeno metallico e quindi da uno strato esterno gassoso.</P>
+            <P class="small-text1 cww">Saturno è il sesto pianeta del sistema solare in ordine di distanza dal Sole e il secondo pianeta più massiccio. Rispetto alla Terra, ha un raggio medio 9,48 volte maggiore e una massa 95 volte superiore. Saturno è classificato come gigante gassoso, insieme a Giove, Urano e Nettuno, ed è composto per il 95% da idrogeno e per il 3% da elio, a cui seguono gli altri elementi; il nucleo, consistente in silicati e ghiacci, è circondato da uno spesso strato di idrogeno metallico e quindi da uno strato esterno gassoso.</P>
         </div>
     </div>
     
