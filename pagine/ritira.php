@@ -109,7 +109,7 @@
                         </div>
                     EOD;                }
                 else {
-                    echo "<p>Non ho trovato alcuna navicella che rispetti le sue richieste</p>";
+                    echo "<p>Non ho trovato alcuna navicella che rispetti le sue richieste.</p>";
                 }
                 echo "</table>";
             }
