@@ -53,10 +53,9 @@
 
     <form action="" method = "post">
         <?php
-            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"]) and isset($_POST["prezzo"])){
+            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"])){
                 $nome_navicella = $_POST["nome_navicella"];
                 $nome_pianeta = $_POST["nome_pianeta"];
-                $prezzo = $_POST["prezzo"];
 
                 $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
                         FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
