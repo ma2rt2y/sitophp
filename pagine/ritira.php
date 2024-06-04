@@ -83,7 +83,7 @@
                                 <div class="card-navicelle__testo">
                                         <div class="card-navicelle__testo__centrato">
                                             <p>Nome navicella: $nome_navicella</p>
-                                            <p>Prezzo: $prezzo</p>
+                                            <p>Prezzo: $prezzo £</p>
                                             <p>Nome pianeta: $nome_pianeta</p>
                                             <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
                         EOD; 
