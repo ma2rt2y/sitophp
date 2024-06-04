@@ -44,6 +44,9 @@
                     <td><label for="nome_pianeta">Nome pianeta:</label></td>
                     <td><input class="input_ricerca" type="text" name="nome_pianeta" id="nome_pianeta" value="<?php echo isset($_POST['nome_pianeta']) ? $_POST['nome_pianeta'] : ''; ?>"></td>
                 </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 10px" colspan="2"><input type="submit" value="Cerca"></td>
+                </tr>
             </table>
         </form>
     </div>
