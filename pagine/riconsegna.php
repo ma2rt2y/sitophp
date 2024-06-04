@@ -70,6 +70,7 @@
                                         <p>Prezzo: $prezzo £</p>
                                         <p>Nome pianeta: $nome_pianeta</p>
                                         <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
+                                        <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta riconsegnare</p>"
                                     </div>
                                 </div>
                             </div>
