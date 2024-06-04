@@ -55,8 +55,7 @@
 
     <form action="" method = "post">
         <?php
-            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"])){
-                $nome_navicella = $_POST["nome_navicella"];
+            if(isset($_POST["nome_pianeta"])){
                 $nome_pianeta = $_POST["nome_pianeta"];
 
                 $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
