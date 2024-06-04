@@ -31,13 +31,8 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
-<<<<<<< HEAD
-            <h1 class="cw">Registrati</h1>
-            <p class="cw">Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
-=======
-            <h1 style="padding-bottom: 0px; margin-top: 70px">Registrati</h1>
-            <p style="padding-bottom: 3px">Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
->>>>>>> fdaea6104858e83bffeb4707f0bb30409ee3f46f
+            <h1 style="padding-bottom: 0px; margin-top: 70px" class="cw">Registrati</h1>
+            <p style="padding-bottom: 3px" class="cw">Hai già un account? <a href="login.php" class="cw a1">accedi.</a></p>
             <form action="" method="post">
                 <table class="tabella">
                     <tr>
