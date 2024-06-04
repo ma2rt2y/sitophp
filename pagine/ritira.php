@@ -77,7 +77,7 @@
                                 <div class="elenco_navicelle">
                                 <div class="card-navicelle">
                                     <div class="card-navicelle__img">
-                                        <img src="../media/immagini/$img" alt="$img">
+                                        <img src="../media/immagini/navicelle/$img" alt="$img">
                                     </div>
                                     <div class="card-navicelle__testo">
                                         <div class="card-navicelle__testo__centrato">
