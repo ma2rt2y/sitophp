@@ -33,7 +33,7 @@
     <div class="pianetiv">
         <div class="pianetiv__content">
             <p class="small-text1 cw">La Terra è caratterizzata da un'attività geologica dinamica, con placche tettoniche che si muovono sulla sua superficie e influenzano la formazione delle montagne e degli oceani. Al suo interno, presenta un mantello relativamente solido e un nucleo diviso in esterno e interno, responsabile della generazione del campo magnetico che protegge il pianeta dalle radiazioni solari dannose. 
-                Le influenze esterne, come quelle della Luna sulle maree e sulla stabilità dell'asse terrestre, hanno giocato un ruolo significativo nella storia del pianeta. Anche l'impatto di comete e asteroidi ha plasmato la sua superficie e alterato il corso della sua vita nel corso dei millenni. Il simbolo astronomico della Terra, con un cerchio e una croce, riflette la sua posizione nell'universo e la sua importanza cosmica.</p>
+                Le influenze esterne, come quelle della Luna sulle maree e sulla stabilità dell'asse, hanno giocato un ruolo significativo nella storia del pianeta. Anche l'impatto di comete e asteroidi ha plasmato la sua superficie e alterato il corso della sua vita nel corso dei millenni. Il simbolo astronomico della Terra, con un cerchio e una croce, riflette la sua posizione nell'universo e la sua importanza cosmica.</p>
         </div>
         <div class="pianetiv__img">
             <video autoplay muted loop id="videoz">
