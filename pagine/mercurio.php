@@ -33,7 +33,7 @@
     <div class="pianetiv">
         <div class="pianetiv__content">
             <p class="small-text1 cw"> Il rapporto fra la radiazione solare al perielio e quella all'afelio è 2,3. Per la Terra questo rapporto vale 1,07. La superficie di Mercurio sperimenta la maggiore escursione termica tra tutti i pianeti, con temperature che nelle regioni equatoriali vanno da 100 K (−173 °C) della notte a 700 K (427 °C) del dì; le regioni polari invece sono costantemente inferiori a 180 K (−93 °C). Ciò è dovuto all'assenza dell'atmosfera che, se presente, svolgerebbe un ruolo nella ridistribuzione del calore. La superficie fortemente craterizzata indica che Mercurio è geologicamente inattivo da miliardi di anni.
-                Conosciuto sin dal tempo dei Sumeri, il suo nome è tratto dalla mitologia romana. Il pianeta è stato associato a Mercurio, messaggero degli dèi, probabilmente a causa della rapidità del suo movimento nel cielo. Il suo simbolo astronomico è una versione stilizzata del caduceo del dio.</p>
+                Conosciuto sin dal tempo dei Sumeri, il suo nome è tratto dalla mitologia romana. Il pianeta è stato associato a Mercurio, messaggero degli dèi, a causa della rapidità del suo movimento nel cielo. Il suo simbolo astronomico è una versione stilizzata del caduceo del dio.</p>
         </div>
         <div class="pianetiv__img">
             <video autoplay muted loop id="videoz">
