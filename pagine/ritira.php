@@ -49,42 +49,49 @@
     </div>
 
     <form action="" method = "post">
-            <?php
-                if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"]) and isset($_POST["prezzo"])){
-                    $nome_navicella = $_POST["nome_navicella"];
-                    $nome_pianeta = $_POST["nome_pianeta"];
-                    $prezzo = $_POST["prezzo"];
+        <?php
+            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"]) and isset($_POST["prezzo"])){
+                $nome_navicella = $_POST["nome_navicella"];
+                $nome_pianeta = $_POST["nome_pianeta"];
+                $prezzo = $_POST["prezzo"];
 
-                    $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
-                            FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
-                                            JOIN utenti ON navicella.username_utente = utenti.username
-                            WHERE nome_navicella LIKE '%$nome_navicella%'
-                                AND nome_pianeta LIKE '%$nome_pianeta%'
-                                AND prezzo LIKE '%$prezzo%'";
+                $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
+                        FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
+                                        JOIN utenti ON navicella.username_utente = utenti.username
+                        WHERE nome_navicella LIKE '%$nome_navicella%'
+                            AND nome_pianeta LIKE '%$nome_pianeta%'
+                            AND prezzo LIKE '%$prezzo%'";
+                
+                $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+                if ($ris->num_rows > 0) {
+                    echo "<p>Scegli tra le soluzioni trovate la navicela che preferisci.</p>";
                     
-                    $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-                    if ($ris->num_rows > 0) {
-                        echo "<p>Scegli tra le soluzioni trovate la navicela che preferisci.</p>";
-                        
-                        foreach($ris as $riga){
-                            $cod_navicella = $riga["cod_navicella"];
-                            $nome_navicella = $riga["nome_navicella"];
-                            $img = $riga["img_navicella"];
-                            $prezzo = $riga["prezzo"];
-                            $nome_pianeta = $riga["nome_pianeta"];
+                    foreach($ris as $riga){
+                        $cod_navicella = $riga["cod_navicella"];
+                        $nome_navicella = $riga["nome_navicella"];
+                        $img = $riga["img_navicella"];
+                        $prezzo = $riga["prezzo"];
+                        $nome_pianeta = $riga["nome_pianeta"];
 
+<<<<<<< HEAD
+                        echo <<<EOD
+                        <div class="elenco_navicelle">
+                            <div class="card-navicelle">
+                                <div class="card-navicelle__img">
+                                        <img src="../media/immagini/$img" alt="$img">
+=======
                             echo <<<EOD 
                                 <div class="elenco_navicelle">
-                                    <div class="card-navicelle">
-                                        <div class="card-navicelle__img">
-                                            <img src="../media/immagini/navicelle/$img" alt="$img">
-                                        </div>
-                                        <div class="card-navicelle__testo">
-                                            <div class="card-navicelle__testo__centrato">
-                                                <p>Nome navicella: $nome_navicella</p>
-                                                <p>Prezzo: $prezzo</p>
-                                                <p>Nome pianeta: $nome_pianeta</p>
-                                                <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>        
+                                <div class="card-navicelle">
+                                    <div class="card-navicelle__img">
+                                        <img src="../media/immagini/navicelle/$img" alt="$img">
+                                    </div>
+                                    <div class="card-navicelle__testo">
+                                        <div class="card-navicelle__testo__centrato">
+                                            <p>Nome navicella: $nome_navicella</p>
+                                            <p>Prezzo: $prezzo</p>
+                                            <p>Nome pianeta: $nome_pianeta</p>
+                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>        
                             EOD;
                             if($riga["username_utente"]) {
                                 echo "         <p>Disponibile: No</p>";
