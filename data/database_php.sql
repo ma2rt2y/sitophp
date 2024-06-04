@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.4.32-MariaDB - mariadb.org binary distribution
--- Server OS:                    Win64
--- HeidiSQL Version:             12.5.0.6677
+-- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
+-- S.O. server:                  Win64
+-- HeidiSQL Versione:            12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for database_php
+-- Dump della struttura del database database_php
 CREATE DATABASE IF NOT EXISTS `database_php` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `database_php`;
 
--- Dumping structure for table database_php.navicella
+-- Dump della struttura di tabella database_php.navicella
 CREATE TABLE IF NOT EXISTS `navicella` (
   `nome_navicella` char(50) DEFAULT NULL,
   `cod_navicella` char(50) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `navicella` (
   CONSTRAINT `FK2_cod_pianeta` FOREIGN KEY (`cod_pianeta`) REFERENCES `pianeta` (`cod_pianeta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php.navicella: ~40 rows (approximately)
+-- Dump dei dati della tabella database_php.navicella: ~40 rows (circa)
 REPLACE INTO `navicella` (`nome_navicella`, `cod_navicella`, `username_utente`, `prezzo`, `img`, `cod_pianeta`) VALUES
 	('SS Vulture', '12469785', NULL, 12300000, 'SS Vulture.png', 5),
 	('Ripper', '12576354', NULL, 9930000, 'Ripper.png', 4),
@@ -77,7 +77,7 @@ REPLACE INTO `navicella` (`nome_navicella`, `cod_navicella`, `username_utente`, 
 	('STS Athens IV', '96522542', NULL, 76452300, 'STS Athens IV.jpg', 6),
 	('BS Independence', '98563265', NULL, 34606900, 'BS Independence.jpg', 4);
 
--- Dumping structure for table database_php.pianeta
+-- Dump della struttura di tabella database_php.pianeta
 CREATE TABLE IF NOT EXISTS `pianeta` (
   `nome_pianeta` char(50) DEFAULT NULL,
   `cod_pianeta` int(11) NOT NULL AUTO_INCREMENT,
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `pianeta` (
   PRIMARY KEY (`cod_pianeta`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php.pianeta: ~8 rows (approximately)
+-- Dump dei dati della tabella database_php.pianeta: ~8 rows (circa)
 REPLACE INTO `pianeta` (`nome_pianeta`, `cod_pianeta`, `diametro`) VALUES
 	('Mercurio', 1, 4879),
 	('Venere', 2, 12104),
@@ -96,7 +96,7 @@ REPLACE INTO `pianeta` (`nome_pianeta`, `cod_pianeta`, `diametro`) VALUES
 	('Urano', 7, 50724),
 	('Nettuno', 8, 49244);
 
--- Dumping structure for table database_php.utenti
+-- Dump della struttura di tabella database_php.utenti
 CREATE TABLE IF NOT EXISTS `utenti` (
   `username` char(50) NOT NULL,
   `nome_utente` char(50) DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `utenti` (
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table database_php.utenti: ~4 rows (approximately)
+-- Dump dei dati della tabella database_php.utenti: ~4 rows (circa)
 REPLACE INTO `utenti` (`username`, `nome_utente`, `cognome`, `password`, `email`, `telefono`, `comune`, `indirizzo`) VALUES
 	('asd', 'asd', 'asd', 'asd', 'asd@gmail.com', 1234567891, 'Aicurzio', 'Via croce, 1'),
 	('gaiafedeli', 'Gaia', 'Fedeli', '123', 'gaia.fedeli@liceobanfi.eu', 2147483647, 'Caponago', 'Via Tua Madre, 18'),
