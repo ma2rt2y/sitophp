@@ -33,7 +33,7 @@
     ?>
     <div class="contenuto">
         <h1 style="text-align: center; margin-top: 0px;">Prenota la tua navicella</h1>
-        <p>Cerca un pianea che vuoi visitare o il nome di una navicella</p>
+        <p>Cerca un pianeta che vuoi visitare o il nome di una navicella</p>
         <form action="" method="post">
             <table id="tab">
                 <tr>
@@ -50,13 +50,15 @@
 
     <form action="" method = "post">
             <?php
-                if(isset($_POST["nome_navicella"])){
+                if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"])){
                     $nome_navicella = $_POST["nome_navicella"];
-                }
+                    $nome_pianeta = $_POST["nome_pianeta"];
 
-                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella,
-                        FROM navicella JOIN utenti ON navicella.username_utenti = utenti_username
-                        WHERE nome_navicella LIKE '%$nome_navicella%'";
+                $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta
+                        FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
+                                        JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
+                        WHERE nome_navicella LIKE '%$nome_navicella%'
+                            AND nome_pianeta LIKE '%$nome_pianeta%";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
@@ -65,6 +67,7 @@
                     foreach($ris as $riga){
                         
                     }
+                    echo "</table>";
                 }
             ?>
     </form>
