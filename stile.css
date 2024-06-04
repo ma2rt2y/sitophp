@@ -703,12 +703,25 @@ ul.navlinks li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:  url('media/immagini/stelle5.jpg') no-repeat center center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),  url('media/immagini/stelle5.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .contenuto{
     margin: auto;
+}
+
+.contenuto h1, p{
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.contenuto h1{
+    margin-top: 15px;
+}
+.contenuto p{
+    margin: bottom 5px;
 }
 
 .button-container {
@@ -725,7 +738,7 @@ ul.navlinks li a{
 
 .c-text{
     display: block;
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
 }
 
