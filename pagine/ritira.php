@@ -50,23 +50,24 @@
                     <td><label for="nome_pianeta">Nome pianeta:</label></td>
                     <td><input class="input_ricerca" type="text" name="nome_pianeta" id="nome_pianeta" value="<?php echo isset($_POST['nome_pianeta']) ? $_POST['nome_pianeta'] : ''; ?>"></td>
                 </tr>
+                <tr>
+                    <td style="text-align: center; padding-top: 10px" colspan="2"><input type="submit" value="Cerca"></td>
+                </tr>
             </table>
         </form>
     </div>
 
     <form action="" method = "post">
         <?php
-            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"]) and isset($_POST["prezzo"])){
+            if(isset($_POST["nome_navicella"]) and isset($_POST["nome_pianeta"])){
                 $nome_navicella = $_POST["nome_navicella"];
                 $nome_pianeta = $_POST["nome_pianeta"];
-                $prezzo = $_POST["prezzo"];
 
                 $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
                         FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
                                         JOIN utenti ON navicella.username_utente = utenti.username
                         WHERE nome_navicella LIKE '%$nome_navicella%'
-                            AND nome_pianeta LIKE '%$nome_pianeta%'
-                            AND prezzo LIKE '%$prezzo%'";
+                            AND nome_pianeta LIKE '%$nome_pianeta%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
@@ -88,7 +89,7 @@
                                 <div class="card-navicelle__testo">
                                         <div class="card-navicelle__testo__centrato">
                                             <p>Nome navicella: $nome_navicella</p>
-                                            <p>Prezzo: $prezzo</p>
+                                            <p>Prezzo: $prezzo £</p>
                                             <p>Nome pianeta: $nome_pianeta</p>
                                             <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
                         EOD; 
