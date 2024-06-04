@@ -800,6 +800,7 @@ input[type="text"],input[type="password"]{
 
 .card-navicelle__img img{
     width: 100%;
+    height: 200px;
 }
 
 .card-navicelle__testo{
