@@ -74,8 +74,8 @@
                         $nome_pianeta = $riga["nome_pianeta"];
 
                         echo <<<EOD
-                        <div class="elenco_libri">
-                            <div class="card-libro">
+                        <div class="elenco_navicelle">
+                            <div class="card-navicelle">
                                 <div class="card-navicelle__img">
                                     <img src="../media/immagini/navicelle/$img" alt="$img">
                                 </div>
