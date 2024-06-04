@@ -31,7 +31,7 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
-            <h1 style="padding-bottom: 0px; margin-top: 35px">Registrati</h1>
+            <h1 style="padding-bottom: 0px; margin-top: 70px">Registrati</h1>
             <p style="padding-bottom: 3px">Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
             <form action="" method="post">
                 <table class="tabella">
