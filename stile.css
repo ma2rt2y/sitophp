@@ -749,6 +749,35 @@ input[type="text"],input[type="password"]{
     margin-bottom: 5px;
 }
 
+.scheda{
+    width: 100vw;
+    background-color: #04123d;
+    margin: 0;
+}
+
+.scheda h1{
+    margin: 0;
+    padding-top: 110px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.navicella{
+    display: flex;
+}
+
+.navicella img{
+    width: 40%;
+    margin: 20px 20px;
+}
+
+.navicella p{
+    width: 60%;
+    color: white;
+    margin: 20px 20px;
+}
+
 *,
 *:before,
 *:after{
