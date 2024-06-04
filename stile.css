@@ -814,6 +814,10 @@ input[type="text"],input[type="password"]{
     padding: 10px;
 }
 
+.card-navicelle__testo__sinistra p{
+    text-align: left;
+}
+
 .contenuto1{
     width: 100vw;
     height: 100vh;
