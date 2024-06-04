@@ -73,11 +73,19 @@
                         $prezzo = $riga["prezzo"];
                         $nome_pianeta = $riga["nome_pianeta"];
 
+<<<<<<< HEAD
                         echo <<<EOD
                         <div class="elenco_navicelle">
                             <div class="card-navicelle">
                                 <div class="card-navicelle__img">
                                         <img src="../media/immagini/$img" alt="$img">
+=======
+                            echo <<<EOD 
+                                <div class="elenco_navicelle">
+                                <div class="card-navicelle">
+                                    <div class="card-navicelle__img">
+                                        <img src="../media/immagini/navicelle/$img" alt="$img">
+>>>>>>> 5b88acf9d216094f6b64e54b3615fb2030e4016a
                                     </div>
                                     <div class="card-navicelle__testo">
                                         <div class="card-navicelle__testo__centrato">
