@@ -61,8 +61,7 @@
                         FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
                                         JOIN utenti ON navicella.username_utente = utenti.username
                         WHERE nome_navicella LIKE '%$nome_navicella%'
-                            AND nome_pianeta LIKE '%$nome_pianeta%'
-                            AND prezzo LIKE '%$prezzo%'";
+                            AND nome_pianeta LIKE '%$nome_pianeta%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
