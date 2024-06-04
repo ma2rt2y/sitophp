@@ -58,19 +58,19 @@
             if(isset($_POST["nome_pianeta"])){
                 $nome_pianeta = $_POST["nome_pianeta"];
 
-                $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
+                $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.cod_pianeta, pianeta.nome_pianeta, navicella.prezzo, navicella.img, navicella.username_utente
                         FROM pianeta JOIN navicella ON pianeta.cod_pianeta = navicella.cod_pianeta
-                                        JOIN utenti ON navicella.username_utente = utenti.username
-                        WHERE nome_pianeta LIKE '%$nome_pianeta%'";
+                                     LEFT JOIN utenti ON navicella.username_utente = utenti.username
+                        WHERE pianeta.nome_pianeta LIKE '%$nome_pianeta%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
-                    echo "<p>Scegli tra le soluzioni trovate la navicela che preferisci.</p>";
+                    echo "<p>Scegli tra le soluzioni trovate la navicella che preferisci.</p>";
                     
                     foreach($ris as $riga){
                         $cod_navicella = $riga["cod_navicella"];
                         $nome_navicella = $riga["nome_navicella"];
-                        $img = $riga["img_navicella"];
+                        $img = $riga["img"];
                         $prezzo = $riga["prezzo"];
                         $nome_pianeta = $riga["nome_pianeta"];
 
@@ -92,7 +92,7 @@
                         }
                         else {
                             echo "          <p>Disponibile: Sì</p>";
-                            echo "          <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta per prendere il libro</p>";
+                            echo "          <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta per prenotare la navicella</p>";
                         }
                         echo <<<EOD
                                         </div>
