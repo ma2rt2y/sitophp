@@ -64,7 +64,7 @@
                 $nome_pianeta = $_POST["nome_pianeta"];
 
                 $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
-                        FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
+                        FROM pianeta JOIN navicella ON pianeta.cod_pianeta = navicella.cod_pianeta
                                         JOIN utenti ON navicella.username_utente = utenti.username
                         WHERE nome_navicella LIKE '%$nome_navicella%'
                             AND nome_pianeta LIKE '%$nome_pianeta%'";
