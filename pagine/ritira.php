@@ -37,20 +37,22 @@
     <?php
         require("nav.php");
     ?>
-    <div class="contenuto">
-        <h1 style="text-align: center; margin-top: 0px;">Prenota la tua navicella</h1>
-        <p>Cerca un pianeta che vuoi visitare o il nome di una navicella</p>
-        <form action="" method="post">
-            <table id="tab">
-                <tr>
-                    <td><label for="nome_pianeta">Nome pianeta:</label></td>
-                    <td><input class="input_ricerca" type="text" name="nome_pianeta" id="nome_pianeta" value="<?php echo isset($_POST['nome_pianeta']) ? $_POST['nome_pianeta'] : ''; ?>"></td>
-                </tr>
-                <tr>
-                    <td style="text-align: center; padding-top: 10px" colspan="2"><input type="submit" value="Cerca"></td>
-                </tr>
-            </table>
-        </form>
+    <div class="contenuto1">
+        <div class="contenuto2">
+            <h1 style="text-align: center; padding-top: 120px; margin:0px;" class="cw">Prenota la tua navicella</h1>
+            <p style="text-align: center; margin-top: 0px;" class="cw">Cerca il pianeta che vorresti visitare</p>
+            <form action="" method="post">
+                <table class="tab">
+                    <tr>
+                        <td><label for="nome_pianeta" class="cw">Nome pianeta:</label></td>
+                        <td><input class="input_ricerca" type="text" name="nome_pianeta" id="nome_pianeta" value="<?php echo isset($_POST['nome_pianeta']) ? $_POST['nome_pianeta'] : ''; ?>" style=" background-color: #ffffff77;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Cerca" class="button1 cw c.text" style="margin-top: 33px;"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div>
 
     <form action="" method = "post">
@@ -65,7 +67,7 @@
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
-                    echo "<p>Scegli tra le soluzioni trovate la navicella che preferisci.</p>";
+                    echo "<h2 style='width:100%; text-align:center; padding-top:45px;' class='cn'>Scegli tra le soluzioni trovate la navicella che preferisci.</h2>";
                     
                     foreach($ris as $riga){
                         $cod_navicella = $riga["cod_navicella"];
@@ -85,7 +87,7 @@
                                             <p>Nome navicella: $nome_navicella</p>
                                             <p>Prezzo: $prezzo £</p>
                                             <p>Nome pianeta: $nome_pianeta</p>
-                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
+                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella" class='a1 cb'>Scheda navicella</a></p>
                         EOD; 
                         if ($riga["username_utente"]){
                             echo "          <p>Disponibile: No</p>";
@@ -102,9 +104,9 @@
                         EOD;
                     }
                     echo <<<EOD
-                        "<div class="button-container">
+                        <div class="button-container">
                             <input type="submit" class="button1 cw small-text" value="Conferma">
-                        </div>"
+                        </div>
                     EOD;                }
                 else {
                     echo "<p>Non ho trovato alcuna navicella che rispetti le sue richieste</p>";

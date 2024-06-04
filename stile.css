@@ -16,6 +16,8 @@ p{
 
 /* ! Helpers */
 .cw{color: #fff;}
+.cn{color:navy}
+.cb{color: black;}
 .cww{color: #cacaca;}
 .pd{padding: 20px;}
 .mg1{margin-top: 50px;}
@@ -713,7 +715,6 @@ ul.navlinks li a{
 
 .contenuto h1,
 .contenuto p{
-    color: white;
     text-align: center;
     margin: 0;
 }
@@ -726,9 +727,9 @@ ul.navlinks li a{
 }
 
 .button-container {
-    text-align: center; /* Centra il pulsante orizzontalmente */
-    margin-top: 20px; /* Spazio sopra il pulsante */
-    
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
 }
 
 .button1{
@@ -779,16 +780,22 @@ input[type="text"],input[type="password"]{
 }
 
 .elenco_navicelle{
+    width: 100%;
+    padding: 20px;
     text-align: left;
     margin: auto;
 }
 
 .card-navicelle{
     display: flex;
+    align-items: center;
+    border: 5px solid navy;
+    margin-bottom: 15px;
 }
 
 .card-navicelle__img{
     width: 40%;
+    padding: 15px;
 }
 
 .card-navicelle__img img{
@@ -804,6 +811,32 @@ input[type="text"],input[type="password"]{
 .card-navicelle__testo p{
     margin: 0;
     padding: 10px;
+}
+
+.contenuto1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6)),  url('media/immagini/ritira.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.contenuto1 form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.tab td{
+    margin-bottom: 20px;
 }
 
 *,

@@ -31,8 +31,8 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
-            <h1>Registrati</h1>
-            <p>Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
+            <h1 class="cw">Registrati</h1>
+            <p class="cw">Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
             <form action="" method="post">
                 <table class="tabella">
                     <tr>

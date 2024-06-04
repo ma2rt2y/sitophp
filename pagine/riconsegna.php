@@ -38,8 +38,8 @@
         require("nav.php");
     ?>
     <div class="contenuto">
-        <h1 style="text-align: center; margin-top: 0px;">Riconsegna la tua navicella</h1>
-        <p>Devi riconsegnare una navicella? Sei nel posto giusto</p>
+        <h1 style="text-align: center; margin-top: 0px; padding-top: 120px;" class="cn">Riconsegna la tua navicella</h1>
+        <p class="cn">Devi riconsegnare una navicella? Sei nel posto giusto</p>
         <?php
             $sql = "SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.cod_pianeta, pianeta.nome_pianeta, navicella.prezzo, navicella.img, navicella.username_utente
                     FROM pianeta JOIN navicella ON pianeta.cod_pianeta = navicella.cod_pianeta

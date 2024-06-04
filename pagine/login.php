@@ -24,8 +24,8 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
-            <h1>Login</h1>
-            <p>Non hai ancorra un account? <a href="registrazione.php" class="cw">registrati.</a></p>
+            <h1 class="cw">Login</h1>
+            <p class="cw">Non hai ancorra un account? <a href="registrazione.php" class="cw">registrati.</a></p>
             <form action="" method="post">
                 <table>
                     <tr>
