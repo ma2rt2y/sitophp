@@ -711,7 +711,8 @@ ul.navlinks li a{
     margin: auto;
 }
 
-.contenuto h1, p{
+.contenuto h1,
+.contenuto p{
     color: white;
     text-align: center;
     margin: 0;
