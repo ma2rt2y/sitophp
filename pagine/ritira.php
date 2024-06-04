@@ -75,16 +75,16 @@
 
                             echo <<<EOD 
                                 <div class="elenco_navicelle">
-                                <div class="card-navicelle">
-                                    <div class="card-navicelle__img">
-                                        <img src="../media/immagini/navicelle/$img" alt="$img">
-                                    </div>
-                                    <div class="card-navicelle__testo">
-                                        <div class="card-navicelle__testo__centrato">
-                                            <p>Nome navicella: $nome_navicella</p>
-                                            <p>Prezzo: $prezzo</p>
-                                            <p>Nome pianeta: $nome_pianeta</p>
-                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>        
+                                    <div class="card-navicelle">
+                                        <div class="card-navicelle__img">
+                                            <img src="../media/immagini/navicelle/$img" alt="$img">
+                                        </div>
+                                        <div class="card-navicelle__testo">
+                                            <div class="card-navicelle__testo__centrato">
+                                                <p>Nome navicella: $nome_navicella</p>
+                                                <p>Prezzo: $prezzo</p>
+                                                <p>Nome pianeta: $nome_pianeta</p>
+                                                <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>        
                             EOD;
                             if($riga["username_utente"]) {
                                 echo "         <p>Disponibile: No</p>";
