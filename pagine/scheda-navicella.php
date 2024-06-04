@@ -49,12 +49,9 @@
     <div class="scheda">
         <h1><?php echo $nome_navicella?></h1>
         <div class="navicella">
-            <div class="navicella_img">
-                <?php
-                    echo "<img src='../media/immagini/navicelle/$img' alt='$img'>"
-                ?>
-            </div>
-            
+            <?php
+                echo "<img src='../media/immagini/navicelle/$img' alt='$img'>"
+            ?>
             <div class="descrizione">
                 <?php
                     $paragrafi=explode("\n", $descrizione_txt);
