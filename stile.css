@@ -778,6 +778,34 @@ input[type="text"],input[type="password"]{
     margin: 20px 20px;
 }
 
+.elenco_navicelle{
+    text-align: left;
+    margin: auto;
+}
+
+.card-navicelle{
+    display: flex;
+}
+
+.card-navicelle__img{
+    width: 40%;
+}
+
+.card-navicelle__img img{
+    width: 100%;
+}
+
+.card-navicelle__testo{
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-navicelle__testo p{
+    margin: 0;
+    padding: 10px;
+}
+
 *,
 *:before,
 *:after{
@@ -791,6 +819,3 @@ input[type="text"],input[type="password"]{
 	margin: auto;
 }
 
-/* .card_navicelle{
-    
-} */
