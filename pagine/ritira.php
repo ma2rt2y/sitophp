@@ -43,10 +43,6 @@
         <form action="" method="post">
             <table id="tab">
                 <tr>
-                    <td><label for="nome_navicella">Nome navicella:</label></td>
-                    <td><input class="input_ricerca" type="text" name="nome_navicella" id="nome_navicella" value="<?php echo isset($_POST['nome_navicella']) ? $_POST['nome_navicella'] : ''; ?>"></td>
-                </tr>
-                <tr>
                     <td><label for="nome_pianeta">Nome pianeta:</label></td>
                     <td><input class="input_ricerca" type="text" name="nome_pianeta" id="nome_pianeta" value="<?php echo isset($_POST['nome_pianeta']) ? $_POST['nome_pianeta'] : ''; ?>"></td>
                 </tr>
@@ -66,8 +62,7 @@
                 $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
                         FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
                                         JOIN utenti ON navicella.username_utente = utenti.username
-                        WHERE nome_navicella LIKE '%$nome_navicella%'
-                            AND nome_pianeta LIKE '%$nome_pianeta%'";
+                        WHERE nome_pianeta LIKE '%$nome_pianeta%'";
                 
                 $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                 if ($ris->num_rows > 0) {
