@@ -31,8 +31,8 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
-            <h1>Registrati</h1>
-            <p>Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
+            <h1 style="padding-bottom: 0px; margin-top: 35px">Registrati</h1>
+            <p style="padding-bottom: 3px">Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
             <form action="" method="post">
                 <table class="tabella">
                     <tr>
@@ -72,7 +72,7 @@
                         <td><input type="text" name="indirizzo" id="indirizzo" value="<?php echo $indirizzo?>" style=" background-color: #ffffff77;"></td>
                     </tr>
                 </table>
-                <div class="button-container">
+                <div class="button-container" style="margin-top: 5px">
                     <input type="submit" class="button1 cw small-text" value="Invia">
                 </div>
             </form>
