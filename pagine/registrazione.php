@@ -25,6 +25,8 @@
 
     <div class="contenuto-background">
         <div class="contenuto">
+            <h1>Registrati</h1>
+            <p>Hai già un account? <a href="login.php" class="cw">accedi.</a></p>
             <form action="" method="post">
                 <table class="tabella">
                     <tr>
@@ -68,46 +70,44 @@
                     <input type="submit" class="button1 cw small-text" value="Invia">
                 </div>
             </form>
-        </div>
-    </div>
 
-    
-    <?php
-        if(isset($_POST["username"]) and isset($_POST["password"])){
-            if($_POST["username"] == "" or $_POST["password"] == ""){
-                echo "<p>Username e password non possono essere vuoti</p>";
-            } elseif($_POST["password"] != $_POST["conferma"]){
-                echo "<p>Le due password non corrispondono!</p>";
-            } else{
-                require("../data/connessione_db.php");
-
-                $myquery = "SELECT username, password
-                            FROM utenti
-                            WHERE username = '$username'
-                                AND password = '$password'";
-
-                $ris = $conn -> query($myquery) or die("<p>Query fallita!".$conn->error."</p>");
-                if($ris->num_rows > 0){
-                    echo "<p>Utente già esistente</p>";
-                } else{
-                    $sql = "INSERT INTO utenti(username, password, nome_utente, cognome, email, telefono, comune, indirizzo)
-                            VALUES ('$username', '$password', '$nome', '$cognome', '$email', '$telefono', '$comune', '$indirizzo')";
-                    
-                    if($conn->query($sql) == true){
-                        session_start();
-                        $_SESSION["username"] = $username;
-
-                        $conn->close();
-                        echo "<p>Utente registrato con successo! Verrai mandato alla pagina tra 5 secondi</p>";
-                        header("Refresh: 5, URL=pianeti.php");
+            <?php
+                if(isset($_POST["username"]) and isset($_POST["password"])){
+                    if($_POST["username"] == "" or $_POST["password"] == ""){
+                        echo "<p class='c.text cw normal-text'>Username e password non possono essere vuoti</p>";
+                    } elseif($_POST["password"] != $_POST["conferma"]){
+                        echo "<p class='c.text cw normal-text'>Le due password non corrispondono!</p>";
                     } else{
-                        echo "<p>Non è stato possibile registrare l'utente.</p>";
-                        $conn->close();
+                        require("../data/connessione_db.php");
+
+                        $myquery = "SELECT username, password
+                                    FROM utenti
+                                    WHERE username = '$username'";
+
+                        $ris = $conn -> query($myquery) or die("<p>Query fallita!".$conn->error."</p>");
+                        if($ris->num_rows > 0){
+                            echo "<p class='c.text cw normal-text'>Username già esistente</p>";
+                        } else{
+                            $sql = "INSERT INTO utenti(username, password, nome_utente, cognome, email, telefono, comune, indirizzo)
+                                    VALUES ('$username', '$password', '$nome', '$cognome', '$email', '$telefono', '$comune', '$indirizzo')";
+                            
+                            if($conn->query($sql) == true){
+                                session_start();
+                                $_SESSION["username"] = $username;
+
+                                $conn->close();
+                                echo "<p class='c.text cw normal-text'>Utente registrato con successo! Verrai mandato alla pagina tra 5 secondi</p>";
+                                header("Refresh: 5, URL=pianeti.php");
+                            } else{
+                                echo "<p class='c.text cw normal-text'>Non è stato possibile registrare l'utente.</p>";
+                                
+                            }
+                        }
                     }
                 }
-            }
-        }
-    ?>
+            ?>
+        </div>
+    </div>
 
     <?php
         require('footer1.php');
