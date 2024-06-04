@@ -36,11 +36,12 @@
         <h1 style="text-align: center; margin-top: 0px;">Riconsegna la tua navicella</h1>
         <p>Devi riconsegnare una navicella? Sei nel posto giusto</p>
         <?php
-            $sql="SELECT navicella.nome_navicella, pianeta.nome_pianeta
-                  FROM navicella JOIN viaggia ON navicella.cod_navicella = viaggia.cod_navicella
-                                 JOIN pianeta ON viaggia.cod_pianeta = pianeta.cod_pianeta
-                  WHERE nome_navicella LIKE '%$nome_navicella%'
-                  AND nome_pianeta LIKE '%$nome_pianeta%'";
+            $sql = "SELECT navicella.nome_navicella, pianeta.nome_pianeta, navicella.prezzo
+                    FROM pianeta JOIN navicella ON pianeta.cod_navicella = navicella.cod_navicella
+                                    JOIN utenti ON navicella.username_utente = utenti.username
+                    WHERE nome_navicella LIKE '%$nome_navicella%'
+                        AND nome_pianeta LIKE '%$nome_pianeta%'
+                        AND prezzo LIKE '%$prezzo%'";
 
         $ris=$conn->query($sql) or die("<p>errore</p>");
         if( $ris->num_rows == 0){
@@ -59,7 +60,9 @@
                                 </div>
                                 <div class="card__copy p">
                                     <div class="card-libro__testo__centrato">
-                                        <p>Titolo: $nome_navicella</p>
+                                        <p>Nome navicella: $nome_navicella</p>
+                                        <p>Prezzo: $prezzo</p>
+                                        <p>Nome pianeta: $nome_pianeta</p>
                                         <p><input type='checkbox' name='nome_navicella[]' value='$nome_navicella'/> Spunta per riconsegnare la navicella</p>
                                     </div>
                                 </div>
