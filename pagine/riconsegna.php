@@ -13,7 +13,7 @@
         foreach($navicelle as $navicella){
             $sql = "UPDATE navicella
                     SET username_utente = NULL
-                    WHERE cod_navicella = '".$cod_navicella."'";
+                    WHERE cod_navicella = '".$navicella."'";
             $conn->query($sql) or die("<p>Query fallita!</p>");
         }
     }
@@ -65,12 +65,12 @@
                                 <img src="../media/immagini/navicelle/$img" alt="$img">
                             </div>
                             <div class="card-navicelle__testo">
-                                    <div class="card-navicelle__testo__centrato">
+                                    <div class="card-navicelle__testo__sinistra">
                                         <p>Nome navicella: $nome_navicella</p>
                                         <p>Prezzo: $prezzo £</p>
                                         <p>Nome pianeta: $nome_pianeta</p>
                                         <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
-                                        <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta riconsegnare</p>"
+                                        <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta riconsegnare</p>
                                     </div>
                                 </div>
                             </div>
