@@ -115,51 +115,10 @@
                         </div>
                     EOD;                }
                 else {
-                    echo "<p>Non ho trovato alcuna navicella che rispetti le sue richieste.</p>";
+                    echo "<p style='padding-top: 30px; text-align:center'>Non ho trovato alcuna navicella che rispetti le sue richieste.</p>";
                 }
                 echo "</table>";
             }
-
-
-                            /*echo <<<EOD 
-                                <div class="elenco_navicelle">
-                                <div class="card-navicelle">
-                                    <div class="card-navicelle__img">
-                                        <img src="../media/immagini/navicelle/$img" alt="$img">
-                                    </div>
-                                    <div class="card-navicelle__testo">
-                                        <div class="card-navicelle__testo__centrato">
-                                            <p>Nome navicella: $nome_navicella</p>
-                                            <p>Prezzo: $prezzo</p>
-                                            <p>Nome pianeta: $nome_pianeta</p>
-                                            <p class="link-scheda"><a href="scheda-navicella.php?cod_navicella=$cod_navicella">Scheda navicella</a></p>
-                        EOD; 
-                        if ($riga["username_utente"]){
-                            echo "          <p>Disponibile: No</p>";
-                        }
-                        else {
-                            echo "          <p>Disponibile: Sì</p>";
-                            echo "          <p><input type='checkbox' name='cod_navicelle[]' value='$cod_navicella'/> Spunta per prendere il libro</p>";
-                        }
-                        echo <<<EOD
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        EOD;
-                    }
-                    echo <<<EOD
-                        "<div class="button-container">
-                            <input type="submit" class="button1 cw small-text" value="Conferma">
-                        </div>"
-                    EOD;
-                }
-                else {
-                    echo "<p>Non ho trovato alcuna navicella che rispetti le sue richieste</p>";
-                }
-                echo "</table>";
-            }*/
-
         ?>
     </form>
     <?php

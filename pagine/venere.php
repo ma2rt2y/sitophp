@@ -39,8 +39,7 @@
     <div class="pianetiv">
         <div class="pianetiv__content">
             <p class="small-text1 cw">Classificato come un pianeta terrestre, a volte è definito il "pianeta gemello" della Terra, cui è molto simile per dimensioni e massa. Tuttavia per altri aspetti è piuttosto differente dal nostro pianeta. L'atmosfera di Venere è costituita principalmente da anidride carbonica ed è molto più densa dell'atmosfera terrestre, con una pressione al livello del suolo pari a 92 atm. La densità e la composizione dell'atmosfera creano un impressionante effetto serra che rende Venere il pianeta più caldo del sistema solare.
-
-                Venere è avvolto da uno spesso strato di nubi altamente riflettenti, composte principalmente di acido solforico, che impediscono la visione nello spettro visibile della superficie dallo spazio. Il pianeta non è dotato di satelliti o anelli e ha un campo magnetico più debole di quello terrestre.</p>
+            Venere è avvolto da uno spesso strato di nubi altamente riflettenti, composte principalmente di acido solforico, che impediscono la visione nello spettro visibile della superficie dallo spazio. Il pianeta non è dotato di satelliti o anelli e ha un campo magnetico più debole di quello terrestre.</p>
         </div>
         <div class="pianetiv__img">
             <video autoplay muted loop id="videoz">

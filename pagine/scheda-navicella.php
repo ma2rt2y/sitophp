@@ -5,7 +5,7 @@
     else{
         $cod_navicella=$_GET['cod_navicella'];
         require('../data/connessione_db.php');
-        $sql="SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.img, pianeta.cod_pianeta, pianeta.nome_pianeta, pianeta.diametro
+        $sql="SELECT navicella.cod_navicella, navicella.nome_navicella, navicella.img, pianeta.cod_pianeta, pianeta.nome_pianeta, pianeta.diametro, navicella.descrizione_txt
               FROM navicella JOIN pianeta ON navicella.cod_pianeta=pianeta.cod_pianeta
               WHERE cod_navicella=$cod_navicella ";
         $ris=$conn->query($sql) or die("<p>errore</p>");
@@ -17,7 +17,7 @@
                 $cod_navicella=$riga['cod_navicella'];
                 $nome_navicella=$riga['nome_navicella'];
                 $img=$riga['img'];
-                // $descrizione_txt=$riga['descrizione_txt'];
+                $descrizione_txt=$riga['descrizione_txt'];
                 $cod_pianeta=$riga['cod_pianeta'];
                 $nome_pianeta=$riga['nome_pianeta'];
                 $diametro=$riga['diametro'];
@@ -58,14 +58,14 @@
             <?php
                 echo "<img src='../media/immagini/navicelle/$img' alt='$img'>"
             ?>
-            <!-- <div class="descrizione">
+            <div class="descrizione">
                 <?php
                     $paragrafi=explode("\n", $descrizione_txt);
                     foreach($paragrafi as $paragrafo){
-                        echo "<p>$paragrafo</p>";
+                        echo "<p class='small-text'>$paragrafo</p>";
                     }
                 ?>
-            </div> -->
+            </div>
         </div>
     </div>
 

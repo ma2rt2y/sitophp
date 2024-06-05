@@ -791,7 +791,7 @@ input[type="text"],input[type="password"]{
 
 .scheda{
     width: 100vw;
-    background-color: #04123d;
+    background-color: #3b4e86;
     margin: 0;
 }
 
@@ -809,13 +809,13 @@ input[type="text"],input[type="password"]{
 
 .navicella img{
     width: 40%;
-    margin: 20px 20px;
+    margin: 15px 20px;
 }
 
 .navicella p{
-    width: 60%;
+    width: 90%;
     color: white;
-    margin: 20px 20px;
+    margin: 5px 20px;
 }
 
 .elenco_navicelle{
@@ -851,6 +851,18 @@ input[type="text"],input[type="password"]{
 .card-navicelle__testo p{
     margin: 0;
     padding: 10px;
+}
+
+.card-navicelle__testo__sinistra p{
+    text-align: left;
+}
+
+@media(max-width: 800px){
+    .card-navicelle{
+        flex-wrap: wrap;
+        height:auto;
+    }
+    .card-navicelle__img, .card-navicelle__testo{width: 100%;}
 }
 
 .contenuto1{
