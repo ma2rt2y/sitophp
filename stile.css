@@ -818,6 +818,14 @@ input[type="text"],input[type="password"]{
     text-align: left;
 }
 
+@media(max-width: 800px){
+    .card-navicelle{
+        flex-wrap: wrap;
+        height:auto;
+    }
+    .card-navicelle__img, .card-navicelle__testo{width: 100%;}
+}
+
 .contenuto1{
     width: 100vw;
     height: 100vh;
