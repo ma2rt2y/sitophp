@@ -34,7 +34,7 @@
                     echo "<li><a href='login.php'>Login</a></li>";
                     echo "<li><a href='registrazione.php'>Registrazione</a></li>";
                     echo "<li><a href='logout.php'>Logout</a></li>";
-                    echo "<li><a href='pagine/riconsegna.php'>Riconsegna</a></li>";
+                    echo "<li><a href='riconsegna.php'>Riconsegna</a></li>";
 
                 } else{
                     echo "<li><a href='../index.php'>Home</a></li>";

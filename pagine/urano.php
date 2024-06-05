@@ -18,6 +18,12 @@
     <?php
         require("nav.php");
     ?>
+    <div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
 
     <div class="heropianeti">
         <div class="heropianeti__img">
@@ -52,15 +58,15 @@
     $( document ).ready(function() {
 
         /* Open Panel */
-        $(".mcell").on('click', function() {
-            $(".menu").toggleClass("menu--open");
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
         });
 
     });
 
     ScrollReveal().reveal('.reveal', { distance: '100px',  duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600});
 
-</script> 
+</script>
 
 </body>
 </html>

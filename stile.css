@@ -116,18 +116,52 @@ ul.navlinks li a{
     .menu li{display: block;}
     .menu li a{padding: 15px 30px; font-size: 20px;}
 
-    .menu--open{right: 0%; margin-top: 0;}
-
-    .mcell{
+    .menu--open{
+        right: 0%;
+        background-color: #04123d;
         display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 40px;
-        right: 30px;
+        height: 100%;
     }
 
-    .mcell span{background: rgb(187, 185, 185); height: 3px; width: 100%; display: block; margin-bottom: 5px;}
+    .nav .navlinks{
+        display: none;
+    }
+
+    .menu--open .navlinks{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: x-large;
+    }
+
+    .menu--open .logo{
+        display: none;
+    }
+
+    .navbar{
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 90;
+        cursor: pointer;
+        z-index: 69;
+        transition: .3s;
+        transform: translateX(-100%);
+        width: 30px;
+        
+    }
+
+
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom:4px ;
+    }
 }
 
 .hero{
@@ -169,6 +203,11 @@ ul.navlinks li a{
     text-align: center;
 }
 
+@media(max-width: 600px){
+    .hero__content h1{
+        font-size: 40px;
+    }
+}
 
 #video{
     position: absolute;

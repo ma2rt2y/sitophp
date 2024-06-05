@@ -45,6 +45,12 @@
     <?php
         require('nav.php');
     ?>
+    <div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
 
     <div class="scheda">
         <h1><?php echo $nome_navicella?></h1>
@@ -66,6 +72,20 @@
     <?php
         require('footer1.php');
     ?>
+
+<script>
+    $( document ).ready(function() {
+
+        /* Open Panel */
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
+        });
+
+    });
+
+    ScrollReveal().reveal('.reveal', { distance: '100px',  duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600});
+
+</script>
     
 </body>
 </html>

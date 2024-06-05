@@ -19,6 +19,13 @@
         require("nav.php");
     ?>
 
+<div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
+
     <div class="heropianeti">
         <div class="heropianeti__img">
             <img src="../media/immagini/venere1.jpg" alt="">
@@ -54,8 +61,8 @@
     $( document ).ready(function() {
 
         /* Open Panel */
-        $(".mcell").on('click', function() {
-            $(".menu").toggleClass("menu--open");
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
         });
 
     });

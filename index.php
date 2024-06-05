@@ -18,6 +18,12 @@
     <?php
         require("pagine/nav.php");
     ?>
+    <div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
 
     <div class="hero">
         <div class="hero__content reveal">
@@ -104,12 +110,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js" integrity="sha512-Nx/M3T/fWprNarYOrnl+gfWZ25YlZtSNmhjHeC0+2gCtyAdDFXqaORJBj1dC427zt3z/HwkUpPX+cxzonjUgrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
+
 <script>
     $( document ).ready(function() {
 
         /* Open Panel */
-        $(".mcell").on('click', function() {
-            $(".menu").toggleClass("menu--open");
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
         });
 
     });

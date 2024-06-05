@@ -17,6 +17,12 @@
     <?php
         require("nav.php");
     ?>
+    <div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
 
     <div class="hero" >
         <div class="hero__content" style = "width: 100%">
@@ -44,12 +50,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+
+   
 <script>
     $( document ).ready(function() {
 
         /* Open Panel */
-        $(".mcell").on('click', function() {
-            $(".menu").toggleClass("menu--open");
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
         });
 
     });
@@ -57,6 +66,7 @@
     ScrollReveal().reveal('.reveal', { distance: '100px',  duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600});
 
 </script>
+
 
 </body>
 </html>

@@ -13,7 +13,7 @@
         foreach($navicelle as $navicella){
             $sql = "UPDATE navicella
                     SET username_utente = NULL
-                    WHERE cod_navicella = '".$cod_navicella."'";
+                    WHERE cod_navicella = '$navicella'";
             $conn->query($sql) or die("<p>Query fallita!</p>");
         }
     }
@@ -37,6 +37,12 @@
     <?php
         require("nav.php");
     ?>
+    <div class="navbar">
+        
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+    </div>
     <div class="contenuto">
         <h1 style="text-align: center; margin-top: 0px; padding-top: 120px;" class="cn">Riconsegna la tua navicella</h1>
         <p class="cn">Devi riconsegnare una navicella? Sei nel posto giusto</p>
@@ -85,6 +91,20 @@
     <?php
         require('footer1.php');
     ?>
+
+<script>
+    $( document ).ready(function() {
+
+        /* Open Panel */
+        $(".navbar").on('click', function() {
+            $(".nav").toggleClass("menu--open");
+        });
+
+    });
+
+    ScrollReveal().reveal('.reveal', { distance: '100px',  duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600});
+
+</script>
     
 </body>
 </html>           
